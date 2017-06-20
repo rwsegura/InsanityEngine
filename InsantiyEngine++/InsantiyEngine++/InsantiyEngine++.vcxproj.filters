@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Grpahics Framework">
+      <UniqueIdentifier>{98e50b81-e267-4f3d-949e-fb909c9d0281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework">
+      <UniqueIdentifier>{8aba2546-0b5c-47a7-abe7-70ae86b5e6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking Framework">
+      <UniqueIdentifier>{74eefab9-06b6-474d-902b-6603355c1c76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework">
+      <UniqueIdentifier>{5d1184ae-91ae-46b4-8678-efe24a09981b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Header Files">
+      <UniqueIdentifier>{36478270-efb9-4d1c-aa4a-ee4e013de3eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking Framework\Header Files">
+      <UniqueIdentifier>{9287b259-664d-4c8d-8dc2-8a0da3be78a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Header Files">
+      <UniqueIdentifier>{129f674c-eaf2-47e6-a589-d30cf2f7c19e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Source Files">
+      <UniqueIdentifier>{46976d85-1c2d-4118-ad47-e5a4fe09bbf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking Framework\Source Files">
+      <UniqueIdentifier>{fca526b8-2a45-46f5-8d6f-d3b3cfc990e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Source Files">
+      <UniqueIdentifier>{d4425506-7dc3-4d5f-89d2-3386b9b16dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Controllers">
+      <UniqueIdentifier>{ed6567e9-3f55-4eb5-9aef-83753dd18080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Controllers\Header Files">
+      <UniqueIdentifier>{407c86ab-c9cc-4439-87a2-d5220bc1cb7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Controllers\Source Files">
+      <UniqueIdentifier>{46e493fa-62b4-46d3-99fc-019bc2bb9406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\DataFactories">
+      <UniqueIdentifier>{5e53d933-f353-4451-ab31-99e621695329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\GraphicsData">
+      <UniqueIdentifier>{7e85d0fd-259e-4085-95b0-ba9047c3346a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\GraphicsData\Header Files">
+      <UniqueIdentifier>{be82ba19-5fee-4ef7-b964-467970b45bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\GraphicsData\Source Files">
+      <UniqueIdentifier>{4d8607c3-1409-42db-8715-84ed9537b2bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\DataFactories\Header Files">
+      <UniqueIdentifier>{5906d9cf-7d79-40dd-90b3-cc0785d2c8aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\DataFactories\Source Files">
+      <UniqueIdentifier>{9eb4c6b0-a1e6-4b87-a6ed-996adb8081ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Interfaces">
+      <UniqueIdentifier>{794e767f-50b8-444e-b9b6-bd89206457fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore">
+      <UniqueIdentifier>{cc40ae70-b86b-4c4a-b580-0364e8b85d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Header Files">
+      <UniqueIdentifier>{58fabde8-d8a8-49e1-bd68-c3fe267472f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Source Files">
+      <UniqueIdentifier>{f7958829-4451-48cf-a1b1-138d8cb8dba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{2c6808d9-3d0b-464e-8a1a-d19e87f4b11b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Header Files">
+      <UniqueIdentifier>{2df57f3f-ca6e-4db5-abdd-82d3095a6ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Source Files">
+      <UniqueIdentifier>{49cb721f-7e78-43c8-8c3e-360f6a6f2b08}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="InsanityEngine.cpp">
+      <Filter>EngineSystemCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineFactory.cpp">
+      <Filter>EngineSystemCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsController.cpp">
+      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraphManager.cpp">
+      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowController.cpp">
+      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsDataFactory.cpp">
+      <Filter>Grpahics Framework\DataFactories\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Utilities\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineFactory.h">
+      <Filter>EngineSystemCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InsanityEngine.h">
+      <Filter>EngineSystemCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputController.h">
+      <Filter>Input Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkingController.h">
+      <Filter>Networking Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundController.h">
+      <Filter>Sound Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsController.h">
+      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowController.h">
+      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraphManager.h">
+      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsDataFactory.h">
+      <Filter>Grpahics Framework\DataFactories\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IGraphicData.h">
+      <Filter>Grpahics Framework\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawable.h">
+      <Filter>Grpahics Framework\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Utilities\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
