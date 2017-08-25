@@ -18,7 +18,7 @@ namespace InsanityEngine {
 
 	class GraphicsDataFactory {
 		public:
-			static IGraphicsData* buildStaticGraphicsData(std::string textureKey, std::vector<IDrawable> &drawableList);
+			static IGraphicsData* buildStaticGraphicsData(std::string textureKey, std::vector<IDrawable*> &drawableList);
 	};
 }
 

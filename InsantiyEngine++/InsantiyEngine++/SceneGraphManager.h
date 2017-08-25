@@ -11,7 +11,7 @@
 
 namespace InsanityEngine {
 
-	typedef std::map<std::string, std::vector<IDrawable>*> DrawableMap;
+	typedef std::map<std::string, std::vector<IDrawable*>*> DrawableMap;
 
 	typedef class SceneGraphManager* SceneGraphManagerRef;
 
@@ -21,7 +21,7 @@ namespace InsanityEngine {
 			~SceneGraphManager();
 
 			void renderDrawableObjects();
-			void addNewStaticObject(IDrawable &drawableObject, std::string textureKey);
+			void addNewStaticObject(IDrawable* drawableObject, std::string textureKey);
 
 		protected:
 			DrawableMap staticDrawableMap;
