@@ -4,13 +4,13 @@ using namespace InsanityEngine;
 
 InsanityGameEngineRef InsanityEngineFactory::createEngine(sf::RenderWindow &window) {
 	GraphicsControllerRef graphicsController = InsanityEngineFactory::createGraphicsController(window);
-	SceneGraphManagerRef sceneGraphManager = InsanityEngineFactory::createSceneGraphManager(graphicsController);
+	DrawableGraphicsManagerRef sceneGraphManager = InsanityEngineFactory::createDrawableGraphicsManager(graphicsController);
 
 	return new InsanityGameEngine(InsanityEngineFactory::createWindowController(window), sceneGraphManager);
 }
 
-SceneGraphManagerRef InsanityEngineFactory::createSceneGraphManager(GraphicsControllerRef graphicsController) {
-	return new SceneGraphManager(graphicsController);
+DrawableGraphicsManagerRef InsanityEngineFactory::createDrawableGraphicsManager(GraphicsControllerRef graphicsController) {
+	return new DrawableGraphicsManager(graphicsController);
 }
 
 GraphicsControllerRef InsanityEngineFactory::createGraphicsController(sf::RenderWindow &window) {

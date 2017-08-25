@@ -1,13 +1,13 @@
 #include "GraphicsDataFactory.h"
-#include "SceneGraphManager.h"
+#include "DrawableGraphicsManager.h"
 
 using namespace InsanityEngine;
 
-SceneGraphManager::SceneGraphManager(GraphicsControllerRef graphicsController) {
+DrawableGraphicsManager::DrawableGraphicsManager(GraphicsControllerRef graphicsController) {
 	this->graphicsController = graphicsController;
 }
 
-SceneGraphManager::~SceneGraphManager() {
+DrawableGraphicsManager::~DrawableGraphicsManager() {
 	delete this->graphicsController;
 
 	for (int index = 0; index < this->cachedStaticGraphicsData.size(); ++index) {
@@ -21,14 +21,14 @@ SceneGraphManager::~SceneGraphManager() {
 
 }
 
-void SceneGraphManager::generateStaticData() {
+void DrawableGraphicsManager::generateStaticData() {
 	for (auto it = this->staticDrawableMap.begin(); it != this->staticDrawableMap.end(); it++) {
 		IGraphicsData *graphicsData =  GraphicsDataFactory::buildStaticGraphicsData(it->first, *it->second);
 		this->cachedStaticGraphicsData.push_back(graphicsData);
 	}
 }
 
-void SceneGraphManager::renderDrawableObjects() {
+void DrawableGraphicsManager::renderDrawableObjects() {
 	if (this->cachedStaticGraphicsData.size() == 0) {
 		this->generateStaticData();
 	}
@@ -36,7 +36,7 @@ void SceneGraphManager::renderDrawableObjects() {
 	this->graphicsController->renderGraphics(this->cachedStaticGraphicsData);
 }
 
-void SceneGraphManager::addNewStaticObject(IDrawable *drawableObject, std::string textureKey) {
+void DrawableGraphicsManager::addNewStaticObject(IDrawable *drawableObject, std::string textureKey) {
 	if (this->staticDrawableMap.find(textureKey) == this->staticDrawableMap.end()) {
 		this->staticDrawableMap[textureKey] = new std::vector<IDrawable*>();
 	}

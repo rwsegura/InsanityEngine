@@ -78,7 +78,7 @@
     <ClCompile Include="GraphicsDataFactory.cpp" />
     <ClCompile Include="InsanityEngine.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SceneGraphManager.cpp" />
+    <ClCompile Include="DrawableGraphicsManager.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="WindowController.cpp" />
   </ItemGroup>
@@ -91,7 +91,7 @@
     <ClInclude Include="InputController.h" />
     <ClInclude Include="InsanityEngine.h" />
     <ClInclude Include="NetworkingController.h" />
-    <ClInclude Include="SceneGraphManager.h" />
+    <ClInclude Include="DrawableGraphicsManager.h" />
     <ClInclude Include="SoundController.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WindowController.h" />

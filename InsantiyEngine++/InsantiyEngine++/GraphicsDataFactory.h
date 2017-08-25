@@ -1,7 +1,7 @@
 #ifndef __GRAPHICS_DATA_FACTORY_H__
 #define __GRAPHICS_DATA_FACTORY_H__
 
-#include "SceneGraphManager.h"
+#include "DrawableGraphicsManager.h"
 #include "IDrawable.h"
 #include "IGraphicData.h"
 

@@ -4,19 +4,19 @@
 
 using namespace InsanityEngine;
 
-InsanityGameEngine::InsanityGameEngine(WindowControllerRef windowController, SceneGraphManagerRef sceneGraphManager) {
-	this->sceneGraphManager = sceneGraphManager;
+InsanityGameEngine::InsanityGameEngine(WindowControllerRef windowController, DrawableGraphicsManagerRef drawableGraphicsManager) {
+	this->drawableGraphicsManager = drawableGraphicsManager;
 	this->windowController = windowController;
 }
 
 InsanityGameEngine::~InsanityGameEngine() {
 	delete this->windowController;
-	delete this->sceneGraphManager;
+	delete this->drawableGraphicsManager;
 }
 
 void InsanityGameEngine::runEngine() {
 	while (this->windowController->isActive()) {
 		this->windowController->update();
-		this->sceneGraphManager->renderDrawableObjects();
+		this->drawableGraphicsManager->renderDrawableObjects();
 	}
 }

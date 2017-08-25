@@ -4,7 +4,7 @@
 #include "GraphicsController.h"
 #include "InputController.h"
 #include "NetworkingController.h"
-#include "SceneGraphManager.h"
+#include "DrawableGraphicsManager.h"
 #include "SoundController.h"
 #include "WindowController.h"
 
@@ -13,11 +13,11 @@ namespace InsanityEngine {
 
 	class InsanityGameEngine {
 		public:
-			InsanityGameEngine(WindowControllerRef windowController, SceneGraphManagerRef sceneGraphManager);
+			InsanityGameEngine(WindowControllerRef windowController, DrawableGraphicsManagerRef drawableGraphicsManager);
 			~InsanityGameEngine();
 			void runEngine();
 		private:
-			SceneGraphManagerRef sceneGraphManager;
+			DrawableGraphicsManagerRef drawableGraphicsManager;
 			WindowControllerRef windowController;
 	};
 }

@@ -91,9 +91,6 @@
     <ClCompile Include="GraphicsController.cpp">
       <Filter>Grpahics Framework\Controllers\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SceneGraphManager.cpp">
-      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="WindowController.cpp">
       <Filter>Grpahics Framework\Controllers\Source Files</Filter>
     </ClCompile>
@@ -102,6 +99,9 @@
     </ClCompile>
     <ClCompile Include="Vector2.cpp">
       <Filter>Utilities\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawableGraphicsManager.cpp">
+      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,9 +126,6 @@
     <ClInclude Include="WindowController.h">
       <Filter>Grpahics Framework\Controllers\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGraphManager.h">
-      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GraphicsDataFactory.h">
       <Filter>Grpahics Framework\DataFactories\Header Files</Filter>
     </ClInclude>
@@ -140,6 +137,9 @@
     </ClInclude>
     <ClInclude Include="Vector2.h">
       <Filter>Utilities\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawableGraphicsManager.h">
+      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

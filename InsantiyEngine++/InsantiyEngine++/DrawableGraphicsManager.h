@@ -13,12 +13,12 @@ namespace InsanityEngine {
 
 	typedef std::map<std::string, std::vector<IDrawable*>*> DrawableMap;
 
-	typedef class SceneGraphManager* SceneGraphManagerRef;
+	typedef class DrawableGraphicsManager* DrawableGraphicsManagerRef;
 
-	class SceneGraphManager {
+	class DrawableGraphicsManager {
 		public:
-			SceneGraphManager(GraphicsControllerRef graphicsController);
-			~SceneGraphManager();
+			DrawableGraphicsManager(GraphicsControllerRef graphicsController);
+			~DrawableGraphicsManager();
 
 			void renderDrawableObjects();
 			void addNewStaticObject(IDrawable* drawableObject, std::string textureKey);

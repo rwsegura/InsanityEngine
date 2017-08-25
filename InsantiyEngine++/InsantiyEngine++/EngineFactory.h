@@ -3,7 +3,7 @@
 
 #include "GraphicsController.h"
 #include "InsanityEngine.h"
-#include "SceneGraphManager.h"
+#include "DrawableGraphicsManager.h"
 #include "WindowController.h"
 
 namespace InsanityEngine {
@@ -12,7 +12,7 @@ namespace InsanityEngine {
 		public:
 			static InsanityGameEngineRef createEngine(sf::RenderWindow &window);
 		private:
-			static SceneGraphManagerRef createSceneGraphManager(GraphicsControllerRef graphicController);
+			static DrawableGraphicsManagerRef createDrawableGraphicsManager(GraphicsControllerRef graphicController);
 			static GraphicsControllerRef createGraphicsController(sf::RenderWindow &window);
 			static WindowControllerRef createWindowController(sf::RenderWindow &window);
 	};
