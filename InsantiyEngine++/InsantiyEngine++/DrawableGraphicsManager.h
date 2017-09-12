@@ -21,7 +21,7 @@ namespace InsanityEngine {
 			~DrawableGraphicsManager();
 
 			void renderDrawableObjects();
-			void addNewStaticObject(IDrawable* drawableObject, std::string textureKey);
+			void addNewStaticObject(IDrawable* drawableObject);
 
 		protected:
 			DrawableMap staticDrawableMap;

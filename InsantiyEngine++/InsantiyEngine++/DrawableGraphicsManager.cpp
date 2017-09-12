@@ -10,20 +10,23 @@ DrawableGraphicsManager::DrawableGraphicsManager(GraphicsControllerRef graphicsC
 DrawableGraphicsManager::~DrawableGraphicsManager() {
 	delete this->graphicsController;
 
-	for (int index = 0; index < this->cachedStaticGraphicsData.size(); ++index) {
-		delete this->cachedStaticGraphicsData[index];
+	for (IGraphicsData *data : this->cachedStaticGraphicsData) {
+		delete data;
 	}
 
-	for (auto it = this->staticDrawableMap.begin(); it != this->staticDrawableMap.end(); it++) {
-		it->second->clear();
-		delete it->second;
+	for (auto staticDrawables : this->staticDrawableMap) {
+		staticDrawables.second->clear();
+		delete staticDrawables.second;
 	}
 
 }
 
 void DrawableGraphicsManager::generateStaticData() {
-	for (auto it = this->staticDrawableMap.begin(); it != this->staticDrawableMap.end(); it++) {
-		IGraphicsData *graphicsData =  GraphicsDataFactory::buildStaticGraphicsData(it->first, *it->second);
+	for (auto staticDrawables : this->staticDrawableMap) {
+		IGraphicsData *graphicsData =  GraphicsDataFactory::buildStaticGraphicsData(
+			staticDrawables.first, *(staticDrawables.second)
+		);
+
 		this->cachedStaticGraphicsData.push_back(graphicsData);
 	}
 }
@@ -36,7 +39,8 @@ void DrawableGraphicsManager::renderDrawableObjects() {
 	this->graphicsController->renderGraphics(this->cachedStaticGraphicsData);
 }
 
-void DrawableGraphicsManager::addNewStaticObject(IDrawable *drawableObject, std::string textureKey) {
+void DrawableGraphicsManager::addNewStaticObject(IDrawable *drawableObject) {
+	std::string textureKey = drawableObject->TextureKey();
 	if (this->staticDrawableMap.find(textureKey) == this->staticDrawableMap.end()) {
 		this->staticDrawableMap[textureKey] = new std::vector<IDrawable*>();
 	}

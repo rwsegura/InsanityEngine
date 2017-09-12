@@ -1,10 +1,15 @@
 #include "EngineFactory.h"
+#include "GraphicsDataFactory.h"
+#include "IDrawable.h"
 
 using namespace InsanityEngine;
 
 InsanityGameEngineRef InsanityEngineFactory::createEngine(sf::RenderWindow &window) {
 	GraphicsControllerRef graphicsController = InsanityEngineFactory::createGraphicsController(window);
 	DrawableGraphicsManagerRef sceneGraphManager = InsanityEngineFactory::createDrawableGraphicsManager(graphicsController);
+
+	TestDrawable *draw = new TestDrawable();
+	sceneGraphManager->addNewStaticObject(draw);
 
 	return new InsanityGameEngine(InsanityEngineFactory::createWindowController(window), sceneGraphManager);
 }

@@ -97,11 +97,11 @@
     <ClCompile Include="GraphicsDataFactory.cpp">
       <Filter>Grpahics Framework\DataFactories\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vector2.cpp">
-      <Filter>Utilities\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DrawableGraphicsManager.cpp">
       <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticGraphicsData.cpp">
+      <Filter>Grpahics Framework\GraphicsData\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +140,9 @@
     </ClInclude>
     <ClInclude Include="DrawableGraphicsManager.h">
       <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticGraphicsData.h">
+      <Filter>Grpahics Framework\GraphicsData\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

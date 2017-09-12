@@ -7,7 +7,7 @@ namespace InsanityEngine {
 	
 	class IGraphicsData {
 		public:
-			virtual void render(sf::RenderTarget &window) = 0;
+			virtual void Render(sf::RenderTarget &window) = 0;
 	};
 
 }

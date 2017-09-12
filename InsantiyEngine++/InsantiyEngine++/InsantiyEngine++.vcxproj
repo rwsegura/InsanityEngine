@@ -79,7 +79,7 @@
     <ClCompile Include="InsanityEngine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DrawableGraphicsManager.cpp" />
-    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="StaticGraphicsData.cpp" />
     <ClCompile Include="WindowController.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +93,7 @@
     <ClInclude Include="NetworkingController.h" />
     <ClInclude Include="DrawableGraphicsManager.h" />
     <ClInclude Include="SoundController.h" />
+    <ClInclude Include="StaticGraphicsData.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WindowController.h" />
   </ItemGroup>
