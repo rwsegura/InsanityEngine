@@ -14,7 +14,7 @@ GraphicsController::~GraphicsController() {
 void GraphicsController::renderGraphics(const std::vector<IGraphicsData *> &graphicsData) {
 	this->currentWindow.clear(this->defaultClearColor);
 
-	for (int index = 0; index < graphicsData.size(); ++index) {
+	for (unsigned int index = 0; index < graphicsData.size(); ++index) {
 		graphicsData[index]->Render(this->currentWindow);
 	}
 

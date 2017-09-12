@@ -12,8 +12,7 @@ namespace InsanityEngine {
 		public:
 			static InsanityGameEngineRef createEngine(sf::RenderWindow &window);
 		private:
-			static DrawableGraphicsManagerRef createDrawableGraphicsManager(GraphicsControllerRef graphicController);
-			static GraphicsControllerRef createGraphicsController(sf::RenderWindow &window);
+			
 			static WindowControllerRef createWindowController(sf::RenderWindow &window);
 	};
 

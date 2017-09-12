@@ -103,6 +103,9 @@
     <ClCompile Include="StaticGraphicsData.cpp">
       <Filter>Grpahics Framework\GraphicsData\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GraphicsFactory.cpp">
+      <Filter>Grpahics Framework\DataFactories\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineFactory.h">
@@ -143,6 +146,9 @@
     </ClInclude>
     <ClInclude Include="StaticGraphicsData.h">
       <Filter>Grpahics Framework\GraphicsData\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsFactory.h">
+      <Filter>Grpahics Framework\DataFactories\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
