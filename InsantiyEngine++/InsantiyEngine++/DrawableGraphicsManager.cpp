@@ -32,6 +32,8 @@ void DrawableGraphicsManager::generateStaticData() {
 }
 
 void DrawableGraphicsManager::renderDrawableObjects() {
+	this->graphicsController->refreshGraphicsScene();
+
 	if (this->cachedStaticGraphicsData.size() == 0) {
 		this->generateStaticData();
 	}

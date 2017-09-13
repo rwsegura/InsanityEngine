@@ -40,24 +40,6 @@
     <Filter Include="Grpahics Framework\Controllers\Source Files">
       <UniqueIdentifier>{46e493fa-62b4-46d3-99fc-019bc2bb9406}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\DataFactories">
-      <UniqueIdentifier>{5e53d933-f353-4451-ab31-99e621695329}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\GraphicsData">
-      <UniqueIdentifier>{7e85d0fd-259e-4085-95b0-ba9047c3346a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\GraphicsData\Header Files">
-      <UniqueIdentifier>{be82ba19-5fee-4ef7-b964-467970b45bc2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\GraphicsData\Source Files">
-      <UniqueIdentifier>{4d8607c3-1409-42db-8715-84ed9537b2bf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\DataFactories\Header Files">
-      <UniqueIdentifier>{5906d9cf-7d79-40dd-90b3-cc0785d2c8aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\DataFactories\Source Files">
-      <UniqueIdentifier>{9eb4c6b0-a1e6-4b87-a6ed-996adb8081ca}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Grpahics Framework\Interfaces">
       <UniqueIdentifier>{794e767f-50b8-444e-b9b6-bd89206457fd}</UniqueIdentifier>
     </Filter>
@@ -79,6 +61,24 @@
     <Filter Include="Utilities\Source Files">
       <UniqueIdentifier>{49cb721f-7e78-43c8-8c3e-360f6a6f2b08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Grpahics Framework\Factories">
+      <UniqueIdentifier>{5e53d933-f353-4451-ab31-99e621695329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Factories\Header Files">
+      <UniqueIdentifier>{5906d9cf-7d79-40dd-90b3-cc0785d2c8aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Factories\Source Files">
+      <UniqueIdentifier>{9eb4c6b0-a1e6-4b87-a6ed-996adb8081ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Models">
+      <UniqueIdentifier>{7e85d0fd-259e-4085-95b0-ba9047c3346a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Models\Header Files">
+      <UniqueIdentifier>{be82ba19-5fee-4ef7-b964-467970b45bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grpahics Framework\Models\Source Files">
+      <UniqueIdentifier>{4d8607c3-1409-42db-8715-84ed9537b2bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -95,16 +95,19 @@
       <Filter>Grpahics Framework\Controllers\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsDataFactory.cpp">
-      <Filter>Grpahics Framework\DataFactories\Source Files</Filter>
+      <Filter>Grpahics Framework\Factories\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DrawableGraphicsManager.cpp">
       <Filter>Grpahics Framework\Controllers\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StaticGraphicsData.cpp">
-      <Filter>Grpahics Framework\GraphicsData\Source Files</Filter>
+      <Filter>Grpahics Framework\Models\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsFactory.cpp">
-      <Filter>Grpahics Framework\DataFactories\Source Files</Filter>
+      <Filter>Grpahics Framework\Factories\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Grpahics Framework\Models\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +133,7 @@
       <Filter>Grpahics Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsDataFactory.h">
-      <Filter>Grpahics Framework\DataFactories\Header Files</Filter>
+      <Filter>Grpahics Framework\Factories\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IGraphicData.h">
       <Filter>Grpahics Framework\Interfaces</Filter>
@@ -145,10 +148,13 @@
       <Filter>Grpahics Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StaticGraphicsData.h">
-      <Filter>Grpahics Framework\GraphicsData\Header Files</Filter>
+      <Filter>Grpahics Framework\Models\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsFactory.h">
-      <Filter>Grpahics Framework\DataFactories\Header Files</Filter>
+      <Filter>Grpahics Framework\Factories\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Grpahics Framework\Models\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

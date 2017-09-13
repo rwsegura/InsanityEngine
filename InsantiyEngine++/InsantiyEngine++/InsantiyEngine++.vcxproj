@@ -80,10 +80,12 @@
     <ClCompile Include="InsanityEngine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DrawableGraphicsManager.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="StaticGraphicsData.cpp" />
     <ClCompile Include="WindowController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="EngineFactory.h" />
     <ClInclude Include="GraphicsController.h" />
     <ClInclude Include="GraphicsDataFactory.h" />

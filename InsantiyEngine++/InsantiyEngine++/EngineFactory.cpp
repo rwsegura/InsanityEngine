@@ -1,7 +1,10 @@
-#include "EngineFactory.h"
+#include <memory>
+
+#include "Camera.h"
 #include "GraphicsFactory.h"
-#include "GraphicsDataFactory.h"
 #include "IDrawable.h"
+
+#include "EngineFactory.h"
 
 using namespace InsanityEngine;
 
@@ -10,13 +13,13 @@ TestDrawable *draw = new TestDrawable();
 sceneGraphManager->addNewStaticObject(draw);
 */
 
-InsanityGameEngineRef InsanityEngineFactory::createEngine(sf::RenderWindow &window) {
+InsanityGameEngineRef InsanityEngineFactory::createEngine() {
+	std::shared_ptr<Camera> camera(new Camera());
+	std::shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(200, 200), "SFML works!"));
+
 	return new InsanityGameEngine(
-		InsanityEngineFactory::createWindowController(window),
-		GraphicsFactory::createDrawableGraphicsManager(window)
+		GraphicsFactory::createWindowController(camera, window),
+		GraphicsFactory::createDrawableGraphicsManager(camera, window)
 	);
 }
 
-WindowControllerRef InsanityEngineFactory::createWindowController(sf::RenderWindow &window) {
-	return new WindowController(window);
-}

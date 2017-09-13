@@ -6,9 +6,7 @@
 using namespace InsanityEngine;
 
 int main() {
-	sf::RenderWindow window(sf::VideoMode(200,200), "SFML works!");
-
-	InsanityGameEngineRef engine = InsanityEngineFactory::createEngine(window);
+	InsanityGameEngineRef engine = InsanityEngineFactory::createEngine();
 	engine->runEngine();
 	delete engine;
     return 0;
