@@ -22,9 +22,6 @@ namespace InsanityEngine {
 			std::shared_ptr<sf::RenderWindow> currentWindow;
 
 			void handle_event_updates();
-
-			// TODO: Remove
-			void debug_commands();
 	};
 }
 
