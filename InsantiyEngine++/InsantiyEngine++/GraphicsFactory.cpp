@@ -4,6 +4,8 @@
 
 #include "GraphicsFactory.h"
 
+#include "IDrawable.h"
+
 using namespace InsanityEngine;
 
 GraphicsControllerRef GraphicsFactory::createGraphicsController(std::shared_ptr<Camera> camera, std::shared_ptr<sf::RenderWindow> window) {
@@ -13,7 +15,16 @@ GraphicsControllerRef GraphicsFactory::createGraphicsController(std::shared_ptr<
 
 DrawableGraphicsManagerRef GraphicsFactory::createDrawableGraphicsManager(std::shared_ptr<Camera> camera, std::shared_ptr<sf::RenderWindow> window) {
 	GraphicsControllerRef graphics_controller = GraphicsFactory::createGraphicsController(camera, window);
-	return new DrawableGraphicsManager(graphics_controller);
+	auto drawableManager =  new DrawableGraphicsManager(graphics_controller);
+
+
+	// TEST CODE START
+
+	TestDrawable *drawable = new TestDrawable();
+	drawableManager->addNewStaticObject(drawable);
+
+	// TEST CODE END
+	return drawableManager;
 }
 
 WindowControllerRef GraphicsFactory::createWindowController(std::shared_ptr<Camera> camera, std::shared_ptr<sf::RenderWindow> window) {

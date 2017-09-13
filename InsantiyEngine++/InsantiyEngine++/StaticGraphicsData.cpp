@@ -43,6 +43,8 @@ void StaticGrahpicsData::Render(sf::RenderTarget &window) {
 		// Update a texture from an array of pixels
 		sf::Uint8* pixels = new sf::Uint8[50 * 50 * 4];
 		texture.update(pixels);
+
+		delete pixels; // clean up memory
 	}
 
 	for (StaticTransform transform : this->renderData) {
