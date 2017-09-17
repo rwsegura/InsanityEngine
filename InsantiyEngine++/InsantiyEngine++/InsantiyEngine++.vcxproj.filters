@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Grpahics Framework">
-      <UniqueIdentifier>{98e50b81-e267-4f3d-949e-fb909c9d0281}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Input Framework">
       <UniqueIdentifier>{8aba2546-0b5c-47a7-abe7-70ae86b5e6ff}</UniqueIdentifier>
     </Filter>
@@ -13,35 +10,17 @@
     <Filter Include="Sound Framework">
       <UniqueIdentifier>{5d1184ae-91ae-46b4-8678-efe24a09981b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Input Framework\Header Files">
-      <UniqueIdentifier>{36478270-efb9-4d1c-aa4a-ee4e013de3eb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Networking Framework\Header Files">
       <UniqueIdentifier>{9287b259-664d-4c8d-8dc2-8a0da3be78a8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Sound Framework\Header Files">
       <UniqueIdentifier>{129f674c-eaf2-47e6-a589-d30cf2f7c19e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Input Framework\Source Files">
-      <UniqueIdentifier>{46976d85-1c2d-4118-ad47-e5a4fe09bbf0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Networking Framework\Source Files">
       <UniqueIdentifier>{fca526b8-2a45-46f5-8d6f-d3b3cfc990e6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Sound Framework\Source Files">
       <UniqueIdentifier>{d4425506-7dc3-4d5f-89d2-3386b9b16dbb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\Controllers">
-      <UniqueIdentifier>{ed6567e9-3f55-4eb5-9aef-83753dd18080}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\Controllers\Header Files">
-      <UniqueIdentifier>{407c86ab-c9cc-4439-87a2-d5220bc1cb7c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\Controllers\Source Files">
-      <UniqueIdentifier>{46e493fa-62b4-46d3-99fc-019bc2bb9406}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Grpahics Framework\Interfaces">
-      <UniqueIdentifier>{794e767f-50b8-444e-b9b6-bd89206457fd}</UniqueIdentifier>
     </Filter>
     <Filter Include="EngineSystemCore">
       <UniqueIdentifier>{cc40ae70-b86b-4c4a-b580-0364e8b85d53}</UniqueIdentifier>
@@ -61,23 +40,68 @@
     <Filter Include="Utilities\Source Files">
       <UniqueIdentifier>{49cb721f-7e78-43c8-8c3e-360f6a6f2b08}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\Factories">
+    <Filter Include="Input Framework\Controllers">
+      <UniqueIdentifier>{c6cf7954-d8f5-4820-b0e6-502625278d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Controllers\Header Files">
+      <UniqueIdentifier>{36478270-efb9-4d1c-aa4a-ee4e013de3eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Controllers\Source Files">
+      <UniqueIdentifier>{46976d85-1c2d-4118-ad47-e5a4fe09bbf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Factories">
+      <UniqueIdentifier>{610615e2-8f0b-4694-9838-37061130ee60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Interfaces">
+      <UniqueIdentifier>{f2e51360-37c9-4658-b447-2014b930c315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Models">
+      <UniqueIdentifier>{622dfb2a-9401-4929-98d6-244623ac0b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Framework">
+      <UniqueIdentifier>{98e50b81-e267-4f3d-949e-fb909c9d0281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Framework\Controllers">
+      <UniqueIdentifier>{ed6567e9-3f55-4eb5-9aef-83753dd18080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Framework\Controllers\Header Files">
+      <UniqueIdentifier>{407c86ab-c9cc-4439-87a2-d5220bc1cb7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Framework\Controllers\Source Files">
+      <UniqueIdentifier>{46e493fa-62b4-46d3-99fc-019bc2bb9406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Framework\Interfaces">
+      <UniqueIdentifier>{794e767f-50b8-444e-b9b6-bd89206457fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Framework\Factories">
       <UniqueIdentifier>{5e53d933-f353-4451-ab31-99e621695329}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\Factories\Header Files">
+    <Filter Include="Graphics Framework\Factories\Header Files">
       <UniqueIdentifier>{5906d9cf-7d79-40dd-90b3-cc0785d2c8aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\Factories\Source Files">
+    <Filter Include="Graphics Framework\Factories\Source Files">
       <UniqueIdentifier>{9eb4c6b0-a1e6-4b87-a6ed-996adb8081ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\Models">
+    <Filter Include="Graphics Framework\Models">
       <UniqueIdentifier>{7e85d0fd-259e-4085-95b0-ba9047c3346a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\Models\Header Files">
+    <Filter Include="Graphics Framework\Models\Header Files">
       <UniqueIdentifier>{be82ba19-5fee-4ef7-b964-467970b45bc2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Grpahics Framework\Models\Source Files">
+    <Filter Include="Graphics Framework\Models\Source Files">
       <UniqueIdentifier>{4d8607c3-1409-42db-8715-84ed9537b2bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Models\Header Files">
+      <UniqueIdentifier>{bd78e5a6-8bea-4a61-9035-a66427eeab9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Models\Source Files">
+      <UniqueIdentifier>{25522a0f-340c-4370-8de4-fd7d1465ea92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Factories\Header FIles">
+      <UniqueIdentifier>{ada44ed9-e6bd-4a8e-8f0f-5281750e9df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input Framework\Factories\Source Files">
+      <UniqueIdentifier>{925df5b2-7a32-4577-a85c-2cd593d5f3a9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -89,25 +113,34 @@
       <Filter>EngineSystemCore\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsController.cpp">
-      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+      <Filter>Graphics Framework\Controllers\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WindowController.cpp">
-      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+      <Filter>Graphics Framework\Controllers\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsDataFactory.cpp">
-      <Filter>Grpahics Framework\Factories\Source Files</Filter>
+      <Filter>Graphics Framework\Factories\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DrawableGraphicsManager.cpp">
-      <Filter>Grpahics Framework\Controllers\Source Files</Filter>
+      <Filter>Graphics Framework\Controllers\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StaticGraphicsData.cpp">
-      <Filter>Grpahics Framework\Models\Source Files</Filter>
+      <Filter>Graphics Framework\Models\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsFactory.cpp">
-      <Filter>Grpahics Framework\Factories\Source Files</Filter>
+      <Filter>Graphics Framework\Factories\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>Grpahics Framework\Models\Source Files</Filter>
+      <Filter>Graphics Framework\Models\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputController.cpp">
+      <Filter>Input Framework\Controllers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputState.cpp">
+      <Filter>Input Framework\Models\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputFactory.cpp">
+      <Filter>Input Framework\Factories\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +151,7 @@
       <Filter>EngineSystemCore\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputController.h">
-      <Filter>Input Framework\Header Files</Filter>
+      <Filter>Input Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NetworkingController.h">
       <Filter>Networking Framework\Header Files</Filter>
@@ -127,34 +160,46 @@
       <Filter>Sound Framework\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsController.h">
-      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+      <Filter>Graphics Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WindowController.h">
-      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+      <Filter>Graphics Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsDataFactory.h">
-      <Filter>Grpahics Framework\Factories\Header Files</Filter>
+      <Filter>Graphics Framework\Factories\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IGraphicData.h">
-      <Filter>Grpahics Framework\Interfaces</Filter>
+      <Filter>Graphics Framework\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="IDrawable.h">
-      <Filter>Grpahics Framework\Interfaces</Filter>
+      <Filter>Graphics Framework\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="Vector2.h">
       <Filter>Utilities\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DrawableGraphicsManager.h">
-      <Filter>Grpahics Framework\Controllers\Header Files</Filter>
+      <Filter>Graphics Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StaticGraphicsData.h">
-      <Filter>Grpahics Framework\Models\Header Files</Filter>
+      <Filter>Graphics Framework\Models\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsFactory.h">
-      <Filter>Grpahics Framework\Factories\Header Files</Filter>
+      <Filter>Graphics Framework\Factories\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>Grpahics Framework\Models\Header Files</Filter>
+      <Filter>Graphics Framework\Models\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InputState.h">
+      <Filter>Input Framework\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputFactory.h">
+      <Filter>Input Framework\Factories\Header FIles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="input.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Test.png" />
   </ItemGroup>
 </Project>

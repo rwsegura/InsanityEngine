@@ -1,6 +1,7 @@
 #include <memory>
 
 #include "Camera.h"
+#include "InputFactory.h"
 #include "GraphicsFactory.h"
 
 #include "EngineFactory.h"
@@ -13,6 +14,7 @@ InsanityGameEngineRef InsanityEngineFactory::createEngine() {
 	std::shared_ptr<Camera> camera(new Camera(view));
 
 	return new InsanityGameEngine(
+		InputFactory::createInputController("input.json"),
 		GraphicsFactory::createWindowController(camera, window),
 		GraphicsFactory::createDrawableGraphicsManager(camera, window)
 	);

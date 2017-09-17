@@ -20,8 +20,10 @@ DrawableGraphicsManagerRef GraphicsFactory::createDrawableGraphicsManager(std::s
 
 	// TEST CODE START
 
-	TestDrawable *drawable = new TestDrawable();
+	TestDrawable *drawable = new TestDrawable(0.0f, 0.0f);
+	TestDrawable *draw2 = new TestDrawable(100.0f, 100.0f);
 	drawableManager->addNewStaticObject(drawable);
+	drawableManager->addNewStaticObject(draw2);
 
 	// TEST CODE END
 	return drawableManager;

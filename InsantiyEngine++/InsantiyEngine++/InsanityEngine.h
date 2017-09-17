@@ -13,12 +13,18 @@ namespace InsanityEngine {
 
 	class InsanityGameEngine {
 		public:
-			InsanityGameEngine(WindowControllerRef windowController, DrawableGraphicsManagerRef drawableGraphicsManager);
+			InsanityGameEngine(
+				InputControllerRef inputController,
+				WindowControllerRef windowController,
+				DrawableGraphicsManagerRef drawableGraphicsManager
+			);
+
 			~InsanityGameEngine();
 			void runEngine();
 		private:
 			DrawableGraphicsManagerRef drawableGraphicsManager;
 			WindowControllerRef windowController;
+			InputControllerRef input_controller;
 	};
 }
 

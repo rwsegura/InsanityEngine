@@ -45,7 +45,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Libaries\SFML-2.4.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libaries\SFML-2.4.2\include;D:\Libaries\rapidjson-master\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -77,6 +77,9 @@
     <ClCompile Include="GraphicsController.cpp" />
     <ClCompile Include="GraphicsDataFactory.cpp" />
     <ClCompile Include="GraphicsFactory.cpp" />
+    <ClCompile Include="InputController.cpp" />
+    <ClCompile Include="InputFactory.cpp" />
+    <ClCompile Include="InputState.cpp" />
     <ClCompile Include="InsanityEngine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DrawableGraphicsManager.cpp" />
@@ -93,6 +96,8 @@
     <ClInclude Include="IDrawable.h" />
     <ClInclude Include="IGraphicData.h" />
     <ClInclude Include="InputController.h" />
+    <ClInclude Include="InputFactory.h" />
+    <ClInclude Include="InputState.h" />
     <ClInclude Include="InsanityEngine.h" />
     <ClInclude Include="NetworkingController.h" />
     <ClInclude Include="DrawableGraphicsManager.h" />
@@ -100,6 +105,12 @@
     <ClInclude Include="StaticGraphicsData.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WindowController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="input.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Test.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

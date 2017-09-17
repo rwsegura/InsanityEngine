@@ -21,8 +21,13 @@ namespace InsanityEngine {
 
 	class TestDrawable : public IDrawable {
 		public:
+			TestDrawable(float x, float y) {
+				this->x = x;
+				this->y = y;
+			}
+
 			virtual RedStd::Vec2f Position() {
-				return RedStd::Vec2f(0.0f, 0.0f);
+				return RedStd::Vec2f(x, y);
 			}
 
 			virtual RedStd::Vec2f Rotation() {
@@ -38,8 +43,11 @@ namespace InsanityEngine {
 			}
 
 			virtual std::string TextureKey() {
-				return "Test";
+				return "Test.png";
 			}
+
+		private:
+			float x, y;
 	};
 
 }
