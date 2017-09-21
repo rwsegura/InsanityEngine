@@ -28,15 +28,6 @@ void InsanityGameEngine::runEngine() {
 	while (this->windowController->isActive()) {
 		this->input_controller->udpateInputState();
 
-		// DEBUG
-		if (this->input_controller->isKeyPressed("TEST")) {
-			std::cout << "INPUT IS PRESSED" << std::endl;
-		} else if (this->input_controller->isKeyHeld("TEST")) {
-			std::cout << "INPUT IS HELDED" << std::endl;
-		} else if (this->input_controller->isKeyReleased("TEST")) {
-			std::cout << "INPUT IS RELEASED" << std::endl;
-		}
-
 		this->windowController->update();
 		this->drawableGraphicsManager->renderDrawableObjects();
 	}

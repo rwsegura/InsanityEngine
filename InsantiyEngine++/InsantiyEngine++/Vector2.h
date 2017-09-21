@@ -1,3 +1,6 @@
+#ifndef __RED_VECTOR_H__
+#define __RED_VECTOR_H__
+
 #include <iostream>
 
 namespace RedStd {
@@ -6,6 +9,8 @@ namespace RedStd {
 	class Vec2 {
 		public:
 			T x, y;
+
+			Vec2() {}
 
 			Vec2(T x, T y) {
 				this->x = x;
@@ -63,7 +68,7 @@ namespace RedStd {
 
 	template <class T>
 	std::ostream &operator<<(std::ostream &output, const Vec2<T> &v) {
-		return output << "X: " << v->x << " Y: " << v->y << std::endl;
+		return output << "X: " << v.x << " Y: " << v.y << std::endl;
 	}
 
 	typedef class Vec2<int> Vec2i;
@@ -71,3 +76,5 @@ namespace RedStd {
 	typedef class Vec2<float> Vec2f;
 	typedef class Vec2<double> Vec2d;
 }
+
+#endif

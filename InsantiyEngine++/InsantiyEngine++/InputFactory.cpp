@@ -7,16 +7,34 @@
 
 using namespace InsanityEngine;
 
-InputController* InputFactory::createInputController(ConfigurationData &data) {
+InputController* InputFactory::createInputController(std::shared_ptr<sf::RenderWindow> window, ConfigurationData &data) {
 	KeyMap name_code_map;
+	MouseMap name_mouse_map;
+
 	KeyMap key_code_map = InputFactory::create_map();
+	MouseMap mouse_code_map = InputFactory::create_mouse_map();
 
 	for (auto itr = data.KeyboardMap.begin(); itr != data.KeyboardMap.end(); ++itr) {
 		sf::Keyboard::Key key = key_code_map[itr->second];
 		name_code_map[itr->first] = key;
 	}
 
-	return new InputController(name_code_map);
+	for (auto itr = data.MouseMap.begin(); itr != data.MouseMap.end(); ++itr) {
+		sf::Mouse::Button button = mouse_code_map[itr->second];
+		name_mouse_map[itr->first] = button;
+	}
+
+	return new InputController(window, name_code_map, name_mouse_map);
+}
+
+MouseMap InputFactory::create_mouse_map() {
+	MouseMap map;
+
+	map["Left"] = sf::Mouse::Left;
+	map["Middle"] = sf::Mouse::Middle;
+	map["Right"] = sf::Mouse::Right;
+
+	return map;
 }
 
 KeyMap InputFactory::create_map() {

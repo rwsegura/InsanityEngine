@@ -17,6 +17,7 @@ namespace InsanityEngine {
 
 			// Input Configuration
 			std::map<std::string, std::string> KeyboardMap;
+			std::map<std::string, std::string> MouseMap;
 
 	};
 

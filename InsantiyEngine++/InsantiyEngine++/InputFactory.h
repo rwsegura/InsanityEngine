@@ -3,16 +3,18 @@
 
 #include "ConfigurationData.h"
 #include "InputController.h"
+#include "InputState.h"
 
 namespace InsanityEngine {
 
 	class InputFactory {
 		public:
-			static InputControllerRef createInputController(ConfigurationData &data);
+			static InputControllerRef createInputController(std::shared_ptr<sf::RenderWindow> window, ConfigurationData &data);
 
 		private:
 			// Creates a Character -> sf::Key mapping
 			static KeyMap create_map();
+			static MouseMap create_mouse_map();
 	};
 
 }

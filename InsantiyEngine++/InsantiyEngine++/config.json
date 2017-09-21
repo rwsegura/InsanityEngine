@@ -1,6 +1,16 @@
 {
+  "title": "Insanity Engine Test",
+  
+  "resolution": {
+    "width": 400,
+    "height": 400
+  },
 
   "keyboard": {
-    "TEST": "L"
+    "Forward": "W"
+  },
+
+  "mouse": {
+    "TEST": "Left"
   }
 }
