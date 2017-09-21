@@ -1,44 +1,22 @@
 #include <cstdio>
 #include <iostream>
-#include <rapidjson\filereadstream.h>
-#include <rapidjson\document.h>
 
+#include "ConfigurationData.h"
 #include "InputController.h"
 #include "InputFactory.h"
 
-using namespace rapidjson;
 using namespace InsanityEngine;
 
-InputController* InputFactory::createInputController(std::string inputFilename) {
+InputController* InputFactory::createInputController(ConfigurationData &data) {
 	KeyMap name_code_map;
 	KeyMap key_code_map = InputFactory::create_map();
-	Document doc = InputFactory::openInputJsonFile(inputFilename);
 
-	for (auto itr = doc.MemberBegin(); itr != doc.MemberEnd(); ++itr) {
-		sf::Keyboard::Key key = key_code_map[itr->value.GetString()];
-		name_code_map[itr->name.GetString()] = key;
+	for (auto itr = data.KeyboardMap.begin(); itr != data.KeyboardMap.end(); ++itr) {
+		sf::Keyboard::Key key = key_code_map[itr->second];
+		name_code_map[itr->first] = key;
 	}
 
 	return new InputController(name_code_map);
-}
-
-Document InputFactory::openInputJsonFile(std::string filename) {
-	FILE *fp;
-	fopen_s(&fp, filename.c_str(), "rb");
-	if (!fp) {
-		std::cout << "Unable to Open Input File." << std::endl;
-		perror(filename.c_str());
-	}
-
-	char readBuffer[65536];
-	FileReadStream is(fp, readBuffer, sizeof(readBuffer));
-
-	Document doc;
-	doc.ParseStream(is);
-
-	fclose(fp);
-
-	return doc;
 }
 
 KeyMap InputFactory::create_map() {

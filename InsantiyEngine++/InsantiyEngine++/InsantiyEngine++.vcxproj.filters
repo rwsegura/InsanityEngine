@@ -195,11 +195,14 @@
     <ClInclude Include="InputFactory.h">
       <Filter>Input Framework\Factories\Header FIles</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="input.json" />
+    <ClInclude Include="ConfigurationData.h">
+      <Filter>EngineSystemCore\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json" />
   </ItemGroup>
 </Project>

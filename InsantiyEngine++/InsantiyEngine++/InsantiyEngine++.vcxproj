@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="ConfigurationData.h" />
     <ClInclude Include="EngineFactory.h" />
     <ClInclude Include="GraphicsController.h" />
     <ClInclude Include="GraphicsDataFactory.h" />
@@ -107,7 +108,7 @@
     <ClInclude Include="WindowController.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="input.json" />
+    <None Include="config.json" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />
