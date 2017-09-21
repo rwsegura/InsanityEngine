@@ -1,5 +1,6 @@
 {
   "title": "Insanity Engine Test",
+  "version":  "0.0.3",
   
   "resolution": {
     "width": 400,
