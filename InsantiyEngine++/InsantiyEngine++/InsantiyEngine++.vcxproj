@@ -84,6 +84,10 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DrawableGraphicsManager.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="MusicSound.cpp" />
+    <ClCompile Include="SoundBase.cpp" />
+    <ClCompile Include="SoundController.cpp" />
+    <ClCompile Include="SoundFactory.cpp" />
     <ClCompile Include="StaticGraphicsData.cpp" />
     <ClCompile Include="WindowController.cpp" />
   </ItemGroup>
@@ -100,9 +104,12 @@
     <ClInclude Include="InputFactory.h" />
     <ClInclude Include="InputState.h" />
     <ClInclude Include="InsanityEngine.h" />
+    <ClInclude Include="MusicSound.h" />
     <ClInclude Include="NetworkingController.h" />
     <ClInclude Include="DrawableGraphicsManager.h" />
+    <ClInclude Include="SoundBase.h" />
     <ClInclude Include="SoundController.h" />
+    <ClInclude Include="SoundFactory.h" />
     <ClInclude Include="StaticGraphicsData.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WindowController.h" />
@@ -112,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="ChillingMusic.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

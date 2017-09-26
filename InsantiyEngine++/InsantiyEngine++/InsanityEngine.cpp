@@ -9,10 +9,12 @@
 using namespace InsanityEngine;
 
 InsanityGameEngine::InsanityGameEngine(
+	SoundControllerRef soundController,
 	InputControllerRef inputController,
 	WindowControllerRef windowController,
 	DrawableGraphicsManagerRef drawableGraphicsManager
 ) {
+	this->sound_controller = soundController;
 	this->input_controller = inputController;
 	this->drawableGraphicsManager = drawableGraphicsManager;
 	this->windowController = windowController;
@@ -25,6 +27,8 @@ InsanityGameEngine::~InsanityGameEngine() {
 }
 
 void InsanityGameEngine::runEngine() {
+	this->sound_controller->playMusic("ChillingMusic.wav");
+
 	while (this->windowController->isActive()) {
 		this->input_controller->udpateInputState();
 

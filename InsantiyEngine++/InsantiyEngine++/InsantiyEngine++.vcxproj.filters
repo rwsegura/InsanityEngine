@@ -13,14 +13,8 @@
     <Filter Include="Networking Framework\Header Files">
       <UniqueIdentifier>{9287b259-664d-4c8d-8dc2-8a0da3be78a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sound Framework\Header Files">
-      <UniqueIdentifier>{129f674c-eaf2-47e6-a589-d30cf2f7c19e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Networking Framework\Source Files">
       <UniqueIdentifier>{fca526b8-2a45-46f5-8d6f-d3b3cfc990e6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Sound Framework\Source Files">
-      <UniqueIdentifier>{d4425506-7dc3-4d5f-89d2-3386b9b16dbb}</UniqueIdentifier>
     </Filter>
     <Filter Include="EngineSystemCore">
       <UniqueIdentifier>{cc40ae70-b86b-4c4a-b580-0364e8b85d53}</UniqueIdentifier>
@@ -103,6 +97,36 @@
     <Filter Include="Input Framework\Factories\Source Files">
       <UniqueIdentifier>{925df5b2-7a32-4577-a85c-2cd593d5f3a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sound Framework\Controllers">
+      <UniqueIdentifier>{d3880efa-c0ac-47df-b65b-bfda8284487c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Controllers\Header Files">
+      <UniqueIdentifier>{129f674c-eaf2-47e6-a589-d30cf2f7c19e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Controllers\Source Files">
+      <UniqueIdentifier>{d4425506-7dc3-4d5f-89d2-3386b9b16dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Interfaces">
+      <UniqueIdentifier>{e170d091-020f-429e-8c45-5a2ab2737124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Factories">
+      <UniqueIdentifier>{7651d6b8-8455-49ed-a7f2-47b0060eda2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Models">
+      <UniqueIdentifier>{0490e01e-bc3a-4a54-9ffb-c4bb73099667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Models\Header Files">
+      <UniqueIdentifier>{408e8118-b16b-4dc6-acdb-77890597fe6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Models\Source Files">
+      <UniqueIdentifier>{28e3864d-477b-4a1b-bbdc-d633a91b3bc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Factories\Header Files">
+      <UniqueIdentifier>{6abfbbc3-f6dc-423a-9769-7589f8a2c096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound Framework\Factories\Source Files">
+      <UniqueIdentifier>{db0ebf3b-2105-4ab0-9976-042fac73b0d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -142,6 +166,18 @@
     <ClCompile Include="InputFactory.cpp">
       <Filter>Input Framework\Factories\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SoundController.cpp">
+      <Filter>Sound Framework\Controllers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundFactory.cpp">
+      <Filter>Sound Framework\Factories\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundBase.cpp">
+      <Filter>Sound Framework\Models\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicSound.cpp">
+      <Filter>Sound Framework\Models\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineFactory.h">
@@ -157,7 +193,7 @@
       <Filter>Networking Framework\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SoundController.h">
-      <Filter>Sound Framework\Header Files</Filter>
+      <Filter>Sound Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsController.h">
       <Filter>Graphics Framework\Controllers\Header Files</Filter>
@@ -198,11 +234,23 @@
     <ClInclude Include="ConfigurationData.h">
       <Filter>EngineSystemCore\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SoundBase.h">
+      <Filter>Sound Framework\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundFactory.h">
+      <Filter>Sound Framework\Factories\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicSound.h">
+      <Filter>Sound Framework\Models\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="ChillingMusic.wav" />
   </ItemGroup>
 </Project>

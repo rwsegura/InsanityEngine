@@ -14,6 +14,7 @@ namespace InsanityEngine {
 	class InsanityGameEngine {
 		public:
 			InsanityGameEngine(
+				SoundControllerRef soundController,
 				InputControllerRef inputController,
 				WindowControllerRef windowController,
 				DrawableGraphicsManagerRef drawableGraphicsManager
@@ -25,6 +26,7 @@ namespace InsanityEngine {
 			DrawableGraphicsManagerRef drawableGraphicsManager;
 			WindowControllerRef windowController;
 			InputControllerRef input_controller;
+			SoundControllerRef sound_controller;
 	};
 }
 

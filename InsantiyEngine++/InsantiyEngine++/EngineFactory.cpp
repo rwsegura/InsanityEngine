@@ -4,10 +4,10 @@
 
 #include "Camera.h"
 #include "ConfigurationData.h"
-#include "InputFactory.h"
-#include "GraphicsFactory.h"
-
 #include "EngineFactory.h"
+#include "GraphicsFactory.h"
+#include "InputFactory.h"
+#include "SoundFactory.h"
 
 using namespace rapidjson;
 using namespace InsanityEngine;
@@ -61,6 +61,7 @@ InsanityGameEngineRef InsanityEngineFactory::createEngine(std::string filename) 
 	std::shared_ptr<Camera> camera(new Camera(view));
 
 	return new InsanityGameEngine(
+		SoundFactory::BuildSoundController(),
 		InputFactory::createInputController(window, data),
 		GraphicsFactory::createWindowController(camera, window),
 		GraphicsFactory::createDrawableGraphicsManager(camera, window)
