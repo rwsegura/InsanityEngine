@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Vector2.h"
+#include "Rect.h"
 
 namespace InsanityEngine {
 
@@ -16,7 +17,7 @@ namespace InsanityEngine {
 
 			// Texture Data
 			virtual std::string TextureKey() = 0;
-			virtual RedStd::Vec2f TextureFrame() = 0;
+			virtual RedStd::Rect TextureFrame() = 0;
 	};
 
 	class TestDrawable : public IDrawable {
@@ -38,8 +39,8 @@ namespace InsanityEngine {
 				return RedStd::Vec2f(1.0f, 1.0f);
 			}
 
-			virtual RedStd::Vec2f TextureFrame() {
-				return RedStd::Vec2f(1.0f, 1.0f);
+			virtual RedStd::Rect TextureFrame() {
+				return RedStd::Rect(30, 0, 40, 40);
 			}
 
 			virtual std::string TextureKey() {

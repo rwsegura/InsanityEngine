@@ -1,4 +1,6 @@
 #include "IDrawable.h"
+#include "Rect.h"
+#include "Vector2.h"
 
 #include "StaticGraphicsData.h"
 
@@ -26,8 +28,8 @@ void StaticGrahpicsData::AddNewDrawable(IDrawable &drawable) {
 	transform.scale = sf::Vector2f(scale.x, scale.y);
 
 	// Convert Frame
-	//RedStd::Vec2f frame = drawable.TextureFrame();
-	//transform.textureFrame = sf::Vector2f(frame.x, frame.y);
+	RedStd::Rect frame = drawable.TextureFrame();
+	transform.textureFrame = sf::IntRect(frame.x, frame.y, frame.width, frame.height);
 
 	this->renderData.push_back(transform);
 }
@@ -50,6 +52,7 @@ void StaticGrahpicsData::Render(sf::RenderTarget &window) {
 	for (StaticTransform transform : this->renderData) {
 		sf::Sprite sprite(texture);
 
+		sprite.setTextureRect(transform.textureFrame);
 		sprite.setPosition(transform.position);
 		sprite.setScale(transform.scale);
 
