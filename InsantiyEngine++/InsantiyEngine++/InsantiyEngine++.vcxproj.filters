@@ -256,8 +256,4 @@
   <ItemGroup>
     <None Include="config.json" />
   </ItemGroup>
-  <ItemGroup>
-    <Media Include="ChillingMusic.wav" />
-    <Media Include="marbles.wav" />
-  </ItemGroup>
 </Project>

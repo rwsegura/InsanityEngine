@@ -122,10 +122,6 @@
   <ItemGroup>
     <Image Include="Test.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Media Include="ChillingMusic.wav" />
-    <Media Include="marbles.wav" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
