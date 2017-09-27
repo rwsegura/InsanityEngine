@@ -178,6 +178,9 @@
     <ClCompile Include="MusicSound.cpp">
       <Filter>Sound Framework\Models\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>Sound Framework\Models\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineFactory.h">
@@ -243,6 +246,9 @@
     <ClInclude Include="MusicSound.h">
       <Filter>Sound Framework\Models\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>Sound Framework\Models\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />
@@ -252,5 +258,6 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="ChillingMusic.wav" />
+    <Media Include="marbles.wav" />
   </ItemGroup>
 </Project>

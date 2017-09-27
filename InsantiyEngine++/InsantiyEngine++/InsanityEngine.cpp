@@ -27,12 +27,11 @@ InsanityGameEngine::~InsanityGameEngine() {
 }
 
 void InsanityGameEngine::runEngine() {
-	this->sound_controller->playMusic("ChillingMusic.wav");
-
 	while (this->windowController->isActive()) {
 		this->input_controller->udpateInputState();
 
 		this->windowController->update();
 		this->drawableGraphicsManager->renderDrawableObjects();
+		this->sound_controller->cleanSoundEffectList();
 	}
 }

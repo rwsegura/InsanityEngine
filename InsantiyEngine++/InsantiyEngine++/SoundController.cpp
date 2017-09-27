@@ -1,7 +1,13 @@
+#include <list>
+#include <SFML\Audio.hpp>
+
+#include <iostream>
+
 #include "MusicSound.h"
 #include "SoundController.h"
 #include "SoundFactory.h"
 
+using namespace sf;
 using namespace std;
 using namespace InsanityEngine;
 
@@ -10,7 +16,47 @@ SoundController::SoundController() {
 }
 
 SoundController::~SoundController() {
+	this->clearSoundData();
+}
+
+void SoundController::clearSoundData() {
+	for (Sound* sound : this->sound_list) {
+		sound->stop();
+		delete sound;
+	}
+
+	for (auto sound_data : this->sfx_map) {
+		delete sound_data.second;
+	}
+
+	this->sfx_map.clear();
+	this->current_music->stop();
 	delete this->current_music;
+}
+
+void SoundController::cleanSoundEffectList() {
+	list<Sound*> delete_list;
+	for (Sound* sound : this->sound_list) {
+		if (sound->getStatus() != SoundSource::Status::Playing) {
+			delete_list.push_back(sound);
+		}
+	}
+
+	for (Sound* sound : delete_list) {
+		this->sound_list.remove(sound);
+		delete sound;
+	}
+}
+
+SoundEffect* SoundController::getSoundEffect(string filename) {
+	SoundEffect* sound_effect = this->sfx_map[filename];
+
+	if (sound_effect == nullptr) {
+		sound_effect = SoundFactory::BuildSoundEffectFile(filename);
+		this->sfx_map[filename] = sound_effect;
+	}
+
+	return sound_effect;
 }
 
 void SoundController::playMusic(string filename) {
@@ -25,5 +71,14 @@ void SoundController::playMusic(string filename) {
 }
 
 void SoundController::playSoundEffect(string filename) {
+	if (this->sound_list.size() == SoundController::MAX_SFX_SOUNDS) return;
 
+	SoundEffect* sfx = this->getSoundEffect(filename);
+
+	Sound* sound = new Sound(sfx->getBuffer());
+	sound->setVolume(sfx->getVolume());
+	sound->setPitch(sfx->getPitch());
+	sound->play();
+
+	sound_list.push_back(sound);
 }

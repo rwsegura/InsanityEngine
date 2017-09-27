@@ -3,7 +3,7 @@
 using namespace std;
 using namespace InsanityEngine;
 
-SoundBase::SoundBase(string filename, int volume, int pitch, bool loop) {
+SoundBase::SoundBase(string filename, float volume, float pitch, bool loop) {
 	this->filename = filename;
 	this->volume = volume;
 	this->pitch = pitch;
@@ -12,4 +12,12 @@ SoundBase::SoundBase(string filename, int volume, int pitch, bool loop) {
 
 string SoundBase::getFilename() {
 	return this->filename;
+}
+
+float SoundBase::getVolume() {
+	return this->volume;
+}
+
+float SoundBase::getPitch() {
+	return this->pitch;
 }

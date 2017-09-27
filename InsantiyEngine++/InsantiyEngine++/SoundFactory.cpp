@@ -1,5 +1,6 @@
 #include "MusicSound.h"
 #include "SoundController.h"
+#include "SoundEffect.h"
 #include "SoundFactory.h"
 
 using namespace std;
@@ -11,4 +12,8 @@ SoundControllerRef SoundFactory::BuildSoundController() {
 
 MusicSound* SoundFactory::BuildMusicFile(string filename) {
 	return new MusicSound(filename);
+}
+
+SoundEffect* SoundFactory::BuildSoundEffectFile(string filename) {
+	return new SoundEffect(filename);
 }

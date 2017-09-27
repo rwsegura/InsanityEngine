@@ -9,8 +9,11 @@ MusicSound::MusicSound(string filename) : MusicSound(filename, false) {
 
 }
 
-MusicSound::MusicSound(string filename, bool loop) : SoundBase(filename, 100, 100, loop) {
+MusicSound::MusicSound(string filename, bool loop) : SoundBase(filename, 100.0f, 1.0f, loop) {
 	music.openFromFile(filename);
+	music.setVolume(this->volume);
+	music.setPitch(this->pitch);
+	music.setLoop(this->loop);
 }
 
 void MusicSound::play() {

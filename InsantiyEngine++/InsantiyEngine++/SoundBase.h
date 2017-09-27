@@ -7,18 +7,15 @@ namespace InsanityEngine {
 
 	class SoundBase {
 		public:
-			SoundBase(std::string filename, int volume, int pitch, bool loop);
+			SoundBase(std::string filename, float volume, float pitch, bool loop);
 
 			std::string getFilename();
-
-			// Abstract Methods
-			virtual void play() = 0;
-			virtual void pause() = 0;
-			virtual void stop() = 0;
+			float getVolume();
+			float getPitch();
 
 		protected:
 			bool loop;
-			int volume, pitch;
+			float volume, pitch;
 			std::string filename;
 	};
 

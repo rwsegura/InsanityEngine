@@ -5,6 +5,7 @@
 
 #include "MusicSound.h"
 #include "SoundController.h"
+#include "SoundEffect.h"
 
 namespace InsanityEngine {
 
@@ -12,6 +13,7 @@ namespace InsanityEngine {
 		public:
 			static SoundControllerRef BuildSoundController();
 			static MusicSound* BuildMusicFile(std::string filename);
+			static SoundEffect* BuildSoundEffectFile(std::string filename);
 	};
 
 }
