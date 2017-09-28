@@ -58,7 +58,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Libaries\SFML-2.4.2\include;D:\Libaries\rapidjson-master\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libaries\SFML-2.4.2\include;D:\Libaries\rapidjson-master\include;D:\Git\InsanityEngine\InsantiyEngine++\RedStd</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -152,6 +152,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RedStd\RedStd.vcxproj">
       <Project>{73ca7456-6d84-4b5a-ac79-f1bb5ac9dd0d}</Project>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

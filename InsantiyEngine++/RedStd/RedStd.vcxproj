@@ -187,13 +187,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\InsantiyEngine++\Rect.h" />
-    <ClInclude Include="..\InsantiyEngine++\Vector2.h" />
     <ClInclude Include="catch.hpp" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="Vector2.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\InsantiyEngine++\Rect.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="test-main.cpp" />
+    <ClCompile Include="test-vector2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
