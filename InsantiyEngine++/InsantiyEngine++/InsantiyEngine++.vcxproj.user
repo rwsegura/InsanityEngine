@@ -3,5 +3,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RedStd Unit Test|Win32'">
     <LocalDebuggerCommand>$(OutDir)RedStd$(TargetExt)</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>--out %25debug</LocalDebuggerCommandArguments>
   </PropertyGroup>
 </Project>

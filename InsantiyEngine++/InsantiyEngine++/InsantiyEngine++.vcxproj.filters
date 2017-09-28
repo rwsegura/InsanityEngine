@@ -10,29 +10,8 @@
     <Filter Include="Sound Framework">
       <UniqueIdentifier>{5d1184ae-91ae-46b4-8678-efe24a09981b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Networking Framework\Header Files">
-      <UniqueIdentifier>{9287b259-664d-4c8d-8dc2-8a0da3be78a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Networking Framework\Source Files">
-      <UniqueIdentifier>{fca526b8-2a45-46f5-8d6f-d3b3cfc990e6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="EngineSystemCore">
       <UniqueIdentifier>{cc40ae70-b86b-4c4a-b580-0364e8b85d53}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EngineSystemCore\Header Files">
-      <UniqueIdentifier>{58fabde8-d8a8-49e1-bd68-c3fe267472f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EngineSystemCore\Source Files">
-      <UniqueIdentifier>{f7958829-4451-48cf-a1b1-138d8cb8dba8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utilities">
-      <UniqueIdentifier>{2c6808d9-3d0b-464e-8a1a-d19e87f4b11b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utilities\Header Files">
-      <UniqueIdentifier>{2df57f3f-ca6e-4db5-abdd-82d3095a6ed7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utilities\Source Files">
-      <UniqueIdentifier>{49cb721f-7e78-43c8-8c3e-360f6a6f2b08}</UniqueIdentifier>
     </Filter>
     <Filter Include="Input Framework\Controllers">
       <UniqueIdentifier>{c6cf7954-d8f5-4820-b0e6-502625278d1f}</UniqueIdentifier>
@@ -127,14 +106,47 @@
     <Filter Include="Sound Framework\Factories\Source Files">
       <UniqueIdentifier>{db0ebf3b-2105-4ab0-9976-042fac73b0d5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EngineSystemCore\Models">
+      <UniqueIdentifier>{6ba5e58b-704a-4af2-bb5d-f8c722a33145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Models\Header Files">
+      <UniqueIdentifier>{27e4e915-077f-488f-991f-4cdc639afe2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Models\Source Files">
+      <UniqueIdentifier>{0f0c66d2-db23-4611-a157-864a77a7e605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Factories">
+      <UniqueIdentifier>{9cbb1a54-566f-47c1-a6eb-c1c7a84c9d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Factories\Header Files">
+      <UniqueIdentifier>{20c1b319-8c2f-42ac-806e-bcd4eabb66de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Factories\Source Files">
+      <UniqueIdentifier>{272cca4d-cb2e-485b-8961-b01a13180fef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Engine Core">
+      <UniqueIdentifier>{2feb9269-6337-4ac6-b2ab-ae6dc7343f84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Engine Core\Header Files">
+      <UniqueIdentifier>{58fabde8-d8a8-49e1-bd68-c3fe267472f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineSystemCore\Engine Core\Source Files">
+      <UniqueIdentifier>{f7958829-4451-48cf-a1b1-138d8cb8dba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking Framework\Controllers">
+      <UniqueIdentifier>{e966738d-94ea-4fdd-ad69-9aca96459464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking Framework\Controllers\Header Files">
+      <UniqueIdentifier>{9287b259-664d-4c8d-8dc2-8a0da3be78a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking Framework\Controllers\Source Files">
+      <UniqueIdentifier>{fca526b8-2a45-46f5-8d6f-d3b3cfc990e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="InsanityEngine.cpp">
-      <Filter>EngineSystemCore\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EngineFactory.cpp">
-      <Filter>EngineSystemCore\Source Files</Filter>
+      <Filter>EngineSystemCore\Engine Core\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsController.cpp">
       <Filter>Graphics Framework\Controllers\Source Files</Filter>
@@ -181,19 +193,19 @@
     <ClCompile Include="SoundEffect.cpp">
       <Filter>Sound Framework\Models\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EngineFactory.cpp">
+      <Filter>EngineSystemCore\Factories\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EngineFactory.h">
-      <Filter>EngineSystemCore\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="InsanityEngine.h">
-      <Filter>EngineSystemCore\Header Files</Filter>
+      <Filter>EngineSystemCore\Engine Core\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputController.h">
       <Filter>Input Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NetworkingController.h">
-      <Filter>Networking Framework\Header Files</Filter>
+      <Filter>Networking Framework\Controllers\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SoundController.h">
       <Filter>Sound Framework\Controllers\Header Files</Filter>
@@ -231,9 +243,6 @@
     <ClInclude Include="InputFactory.h">
       <Filter>Input Framework\Factories\Header FIles</Filter>
     </ClInclude>
-    <ClInclude Include="ConfigurationData.h">
-      <Filter>EngineSystemCore\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SoundBase.h">
       <Filter>Sound Framework\Models\Header Files</Filter>
     </ClInclude>
@@ -245,6 +254,12 @@
     </ClInclude>
     <ClInclude Include="SoundEffect.h">
       <Filter>Sound Framework\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigurationData.h">
+      <Filter>EngineSystemCore\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineFactory.h">
+      <Filter>EngineSystemCore\Factories\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
