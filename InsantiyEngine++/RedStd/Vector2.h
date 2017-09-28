@@ -18,19 +18,19 @@ namespace RedStd {
 			}
 
 			Vec2<T> operator*(T scale) const {
-				return Vect2<T>(this->x * scale, this->y * scale);
+				return Vec2<T>(this->x * scale, this->y * scale);
 			}
 
 			Vec2<T> operator/(T scale) const {
-				return Vect2<T>(this->x / scale, this->y / scale);
+				return Vec2<T>(this->x / scale, this->y / scale);
 			}
 
 			Vec2<T> operator+(const Vec2 &other) const {
-				return Vect2<T>(this->x + other->x, this->y + other->y);
+				return Vec2<T>(this->x + other.x, this->y + other.y);
 			}
 			
 			Vec2<T> operator-(const Vec2 &other) const {
-				return Vect2<T>(this->x - other->x, this->y - other->y);
+				return Vec2<T>(this->x - other.x, this->y - other.y);
 			}
 
 			const Vec2& operator*=(T scale) {
@@ -48,21 +48,21 @@ namespace RedStd {
 			}
 			
 			const Vec2& operator+=(const Vec2 &other) {
-				this->x = this->x + other->x;
-				this->y = this->y + other->y;
+				this->x = this->x + other.x;
+				this->y = this->y + other.y;
 
 				return *this;
 			}
 			
 			const Vec2& operator-=(const Vec2 &other) {
-				this->x = this->x - other->x;
-				this->y = this->y - other->y;
+				this->x = this->x - other.x;
+				this->y = this->y - other.y;
 
 				return *this;
 			}
 
 			friend bool operator==(Vec2<T> u, Vec2<T> v) {
-				return (u->x == v->x) && (u->y == v->y);
+				return (u.x == v.x) && (u.y == v.y);
 			}
 	};
 
