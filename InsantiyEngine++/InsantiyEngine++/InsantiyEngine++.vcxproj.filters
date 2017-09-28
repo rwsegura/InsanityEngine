@@ -181,9 +181,6 @@
     <ClCompile Include="SoundEffect.cpp">
       <Filter>Sound Framework\Models\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rect.cpp">
-      <Filter>Utilities\Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineFactory.h">
@@ -215,9 +212,6 @@
     </ClInclude>
     <ClInclude Include="IDrawable.h">
       <Filter>Graphics Framework\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Utilities\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DrawableGraphicsManager.h">
       <Filter>Graphics Framework\Controllers\Header Files</Filter>
@@ -251,9 +245,6 @@
     </ClInclude>
     <ClInclude Include="SoundEffect.h">
       <Filter>Sound Framework\Models\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rect.h">
-      <Filter>Utilities\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
