@@ -1,3 +1,8 @@
+/**
+* InputState.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __INPUT_STATE_H__
 #define __INPUT_STATE_H__
 

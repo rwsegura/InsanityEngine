@@ -1,3 +1,8 @@
+/**
+* InputController.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __INPUT_CONTROLLER_H__
 #define __INPUT_CONTROLLER_H__
 

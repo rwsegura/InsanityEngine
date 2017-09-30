@@ -1,3 +1,8 @@
+/**
+* InputController.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include <SFML\Graphics.hpp>
 #include <SFML\Window.hpp>
 

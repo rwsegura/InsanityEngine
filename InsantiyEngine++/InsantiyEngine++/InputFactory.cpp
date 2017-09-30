@@ -1,3 +1,8 @@
+/**
+* InputFactory.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include <cstdio>
 #include <iostream>
 
