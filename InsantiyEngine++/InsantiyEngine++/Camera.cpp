@@ -1,3 +1,8 @@
+/**
+* Camera.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include <SFML\Graphics.hpp>
 
 #include "Camera.h"
@@ -11,21 +16,21 @@ Camera::Camera(sf::View &view) : current_view(view) {
 Camera::~Camera() {
 }
 
-void Camera::ApplyView(sf::RenderWindow &window) {
+void Camera::applyView(sf::RenderWindow &window) {
 	window.setView(this->current_view);
 	this->view_needs_update = false;
 }
 
-bool Camera::IsDirty() {
+bool Camera::isDirty() {
 	return this->view_needs_update;
 }
 
-void Camera::Move(float x, float y) {
+void Camera::move(float x, float y) {
 	this->current_view.move(x, y);
 	this->view_needs_update = true;
 }
 
-void Camera::Resize(int width, int height) {
+void Camera::resize(int width, int height) {
 	this->current_view.setSize(width, height);
 	this->view_needs_update = true;
 }

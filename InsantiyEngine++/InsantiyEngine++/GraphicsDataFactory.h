@@ -1,3 +1,8 @@
+/**
+* GraphicsDataFactory.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __GRAPHICS_DATA_FACTORY_H__
 #define __GRAPHICS_DATA_FACTORY_H__
 
@@ -7,6 +12,7 @@
 
 namespace InsanityEngine {
 
+	// TODO: Remove This
 	class TestGraphicData : public IGraphicsData {
 		public:
 			virtual void render(sf::RenderTarget &window) {
@@ -18,7 +24,7 @@ namespace InsanityEngine {
 
 	class GraphicsDataFactory {
 		public:
-			static IGraphicsData* buildStaticGraphicsData(std::string textureKey, std::vector<IDrawable*> &drawableList);
+			static IGraphicsData* BuildStaticGraphicsData(std::string textureKey, std::vector<IDrawable*> &drawableList);
 	};
 }
 

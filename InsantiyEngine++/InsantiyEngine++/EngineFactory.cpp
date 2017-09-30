@@ -63,8 +63,8 @@ InsanityGameEngineRef InsanityEngineFactory::createEngine(std::string filename) 
 	return new InsanityGameEngine(
 		SoundFactory::BuildSoundController(),
 		InputFactory::createInputController(window, data),
-		GraphicsFactory::createWindowController(camera, window),
-		GraphicsFactory::createDrawableGraphicsManager(camera, window)
+		GraphicsFactory::CreateWindowController(camera, window),
+		GraphicsFactory::CreateDrawableGraphicsManager(camera, window)
 	);
 }
 

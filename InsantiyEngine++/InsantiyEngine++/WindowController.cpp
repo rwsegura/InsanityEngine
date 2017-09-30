@@ -1,36 +1,46 @@
-#include "Camera.h"
+/**
+* WindowController.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
 
+#include <SFML\Window.hpp>
+#include <SFML\Graphics.hpp>
+
+#include "Camera.h"
 #include "WindowController.h"
 
+using namespace sf;
+using namespace std;
 using namespace InsanityEngine;
 
-WindowController::WindowController(std::shared_ptr<Camera> camera, std::shared_ptr<sf::RenderWindow> window) : currentWindow(window) {
+WindowController::WindowController(shared_ptr<Camera> camera, shared_ptr<RenderWindow> window) {
 	this->camera = camera;
+	this->current_window = window;
 }
 
 WindowController::~WindowController() {
 }
 
 bool WindowController::isActive() {
-	return this->currentWindow->isOpen();
+	return this->current_window->isOpen();
 }
 
 void WindowController::update() {
-	if (this->camera->IsDirty()) {
-		this->camera->ApplyView(*this->currentWindow);
+	if (this->camera->isDirty()) {
+		this->camera->applyView(*this->current_window);
 	}
 
-	this->handle_event_updates();
+	this->_handleEventUpdates();
 }
 
-void WindowController::handle_event_updates() {
+void WindowController::_handleEventUpdates() {
 	sf::Event event;
-	while (this->currentWindow->pollEvent(event)) {
+	while (this->current_window->pollEvent(event)) {
 		if (event.type == sf::Event::Closed) { // TODO: refactor this
-			this->currentWindow->close();
+			this->current_window->close();
 		}
 		else if (event.type == sf::Event::Resized) {
-			this->camera->Resize(event.size.width, event.size.height);
+			this->camera->resize(event.size.width, event.size.height);
 		}
 	}
 }

@@ -1,3 +1,8 @@
+/**
+* StaticGraphicsData.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __STATIC_GRAPHICS_DATA_H__
 #define __STATIC_GRAPHICS_DATA_H__
 
@@ -15,16 +20,16 @@ namespace InsanityEngine {
 		sf::IntRect textureFrame;
 	};
 
-	class StaticGrahpicsData : public IGraphicsData {
-		private:
-			std::string textureKey;
-			std::vector<StaticTransform> renderData;
-			
+	class StaticGrahpicsData : public IGraphicsData {	
 		public:
 			StaticGrahpicsData(std::string textureKey);
 
-			void AddNewDrawable(IDrawable &drawable);
-			virtual void Render(sf::RenderTarget &window);
+			void addNewDrawable(IDrawable &drawable);
+			virtual void render(sf::RenderTarget &window);
+
+		private:
+			std::string texture_key;
+			std::vector<StaticTransform> render_data;
 	};
 
 }

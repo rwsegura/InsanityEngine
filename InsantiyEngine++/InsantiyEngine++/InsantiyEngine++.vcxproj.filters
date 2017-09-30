@@ -268,4 +268,7 @@
   <ItemGroup>
     <None Include="config.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Coding_Standards.txt" />
+  </ItemGroup>
 </Project>

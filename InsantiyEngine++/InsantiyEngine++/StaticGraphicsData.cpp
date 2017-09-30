@@ -1,3 +1,8 @@
+/**
+* StaticGraphicsData.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include "IDrawable.h"
 #include "Rect.h"
 #include "Vector2.h"
@@ -8,35 +13,35 @@ using namespace std;
 using namespace InsanityEngine;
 
 StaticGrahpicsData::StaticGrahpicsData(string textureKey) {
-	this->textureKey = textureKey;
-	this->renderData = vector<StaticTransform>();
+	this->texture_key = textureKey;
+	this->render_data = vector<StaticTransform>();
 }
 
-void StaticGrahpicsData::AddNewDrawable(IDrawable &drawable) {
+void StaticGrahpicsData::addNewDrawable(IDrawable &drawable) {
 	StaticTransform transform;
 
 	// Convert Position
-	RedStd::Vec2f pos = drawable.Position();
+	RedStd::Vec2f pos = drawable.position();
 	transform.position = sf::Vector2f(pos.x, pos.y);
 
 	// Convert Rotation
-	RedStd::Vec2f rot = drawable.Rotation();
+	RedStd::Vec2f rot = drawable.rotation();
 	transform.rotation = sf::Vector2f(rot.x, rot.y);
 
 	// Convert Scale
-	RedStd::Vec2f scale = drawable.Scale();
+	RedStd::Vec2f scale = drawable.scale();
 	transform.scale = sf::Vector2f(scale.x, scale.y);
 
 	// Convert Frame
-	RedStd::Rect frame = drawable.TextureFrame();
+	RedStd::Rect frame = drawable.textureFrame();
 	transform.textureFrame = sf::IntRect(frame.x, frame.y, frame.width, frame.height);
 
-	this->renderData.push_back(transform);
+	this->render_data.push_back(transform);
 }
 
-void StaticGrahpicsData::Render(sf::RenderTarget &window) {
+void StaticGrahpicsData::render(sf::RenderTarget &window) {
 	sf::Texture texture;
-	texture.loadFromFile(this->textureKey);
+	texture.loadFromFile(this->texture_key);
 
 	if (texture.getSize().x == 0) {
 		// Create a Texture and Set the Pixels
@@ -49,7 +54,7 @@ void StaticGrahpicsData::Render(sf::RenderTarget &window) {
 		delete pixels; // clean up memory
 	}
 
-	for (StaticTransform transform : this->renderData) {
+	for (StaticTransform transform : this->render_data) {
 		sf::Sprite sprite(texture);
 
 		sprite.setTextureRect(transform.textureFrame);

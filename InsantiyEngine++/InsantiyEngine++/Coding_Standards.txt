@@ -1,0 +1,26 @@
+C++ coding standards
+9/29/2017
+
+--- Class Variables ---
+Public		- These should be upperCamelCase
+Protected	- These should be lower_snake_case
+Private		- These should be lower_snake_case
+
+--- Class Variables Types ---
+Member				- On the stack, ends when I am deleted
+Pointer/SharedPtr	- On the heap, should be deleted in the destructor
+Reference Member	- I do not control the lifecycle of this.
+
+--- Class Functions ---
+Static		- These should be UpperCamelCase
+Public		- These should be upperCamelCase
+Proected	- These should be _upperCamelCase
+Private		- These should be _upperCamelCase
+Func Params - These should be uperCamelCase
+Func Name	- No space beween the control and paren
+
+--- Conditionsals and Control Flow ---
+- Space beween the control and paren
+- if (some_check) { }
+- for (;;) {}
+- while () {}

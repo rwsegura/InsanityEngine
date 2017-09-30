@@ -1,3 +1,8 @@
+/**
+* Camera.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __CAMERA_H__
 #define __CAMERA_H__
 
@@ -9,12 +14,12 @@ namespace InsanityEngine {
 			Camera(sf::View &view);
 			~Camera();
 
-			void ApplyView(sf::RenderWindow &window);
+			void applyView(sf::RenderWindow &window);
 
-			bool IsDirty();
+			bool isDirty();
 
-			void Move(float x, float y);
-			void Resize(int width, int height);
+			void move(float x, float y);
+			void resize(int width, int height);
 
 		private:
 			bool view_needs_update;

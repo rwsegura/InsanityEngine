@@ -1,3 +1,8 @@
+/**
+ * GraphicsController.h
+ * Created By: Robert Segura Date: 9/30/2017
+ */
+
 #ifndef __GRAPHICS_CONTROLLER_H__
 #define __GRAPHICS_CONTROLLER_H__
 
@@ -21,8 +26,8 @@ namespace InsanityEngine {
 			void renderGraphics(const std::vector<IGraphicsData *> &graphicsData);
 		private:
 			std::shared_ptr<Camera> camera;
-			sf::Color defaultClearColor;
-			std::shared_ptr<sf::RenderWindow> currentWindow;
+			sf::Color default_clear_color;
+			std::shared_ptr<sf::RenderWindow> current_window;
 	};
 }
 

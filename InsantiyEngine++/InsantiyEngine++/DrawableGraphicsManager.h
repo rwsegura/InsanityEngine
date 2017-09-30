@@ -1,3 +1,8 @@
+/**
+* DrawableGraphicsManager.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __SCENE_GRAPH_MANAGER_H__
 #define __SCENE_GRAPH_MANAGER_H__
 
@@ -17,20 +22,20 @@ namespace InsanityEngine {
 
 	class DrawableGraphicsManager {
 		public:
-			DrawableGraphicsManager(GraphicsControllerRef graphicsController);
+			DrawableGraphicsManager(GraphicsController *graphicsController);
 			~DrawableGraphicsManager();
 
 			void renderDrawableObjects();
 			void addNewStaticObject(IDrawable* drawableObject);
 
 		protected:
-			DrawableMap staticDrawableMap;
-			std::vector<IGraphicsData *> cachedStaticGraphicsData;
+			DrawableMap static_drawable_map;
+			std::vector<IGraphicsData *> cached_static_graphics_data;
 
-			void generateStaticData();
+			void _generateStaticData();
 
 		private:
-			GraphicsControllerRef graphicsController;
+			GraphicsController *graphics_controller;
 	};
 
 }
