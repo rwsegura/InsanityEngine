@@ -22,8 +22,8 @@ InputState::InputState(InputState &inputState) {
 		this->map[name_code_pair.first] = name_code_pair.second;
 	}
 
-	this->mousePosition.x = inputState.mousePosition.x;
-	this->mousePosition.y = inputState.mousePosition.y;
+	this->mouse_position.x = inputState.mouse_position.x;
+	this->mouse_position.y = inputState.mouse_position.y;
 }
 
 void InputState::updateWithMap(sf::RenderWindow &window, KeyMap &nameCodeMap, MouseMap &nameMouseMap) {
@@ -38,8 +38,8 @@ void InputState::updateWithMap(sf::RenderWindow &window, KeyMap &nameCodeMap, Mo
 	}
 
 	sf::Vector2i localPostion = sf::Mouse::getPosition(window);
-	this->mousePosition.x = localPostion.x;
-	this->mousePosition.y = localPostion.y;
+	this->mouse_position.x = localPostion.x;
+	this->mouse_position.y = localPostion.y;
 }
 
 InputStatus InputState::getInputStatusForKey(string inputName) {
@@ -47,5 +47,5 @@ InputStatus InputState::getInputStatusForKey(string inputName) {
 }
 
 Vec2i InputState::getMousePosition() {
-	return this->mousePosition;
+	return this->mouse_position;
 }

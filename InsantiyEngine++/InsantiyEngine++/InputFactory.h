@@ -13,8 +13,8 @@ namespace InsanityEngine {
 
 		private:
 			// Creates a Character -> sf::Key mapping
-			static KeyMap create_map();
-			static MouseMap create_mouse_map();
+			static KeyMap CreateMap();
+			static MouseMap CreateMouseMap();
 	};
 
 }

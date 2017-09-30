@@ -35,7 +35,7 @@ namespace InsanityEngine {
 			MouseMap name_moude_map;
 			InputState current_state;
 			InputState previous_state;
-			std::shared_ptr<sf::RenderWindow> currentWindow;
+			std::shared_ptr<sf::RenderWindow> current_window;
 	};
 
 }

@@ -11,8 +11,8 @@ InputController* InputFactory::createInputController(std::shared_ptr<sf::RenderW
 	KeyMap name_code_map;
 	MouseMap name_mouse_map;
 
-	KeyMap key_code_map = InputFactory::create_map();
-	MouseMap mouse_code_map = InputFactory::create_mouse_map();
+	KeyMap key_code_map = InputFactory::CreateMap();
+	MouseMap mouse_code_map = InputFactory::CreateMouseMap();
 
 	for (auto itr = data.KeyboardMap.begin(); itr != data.KeyboardMap.end(); ++itr) {
 		sf::Keyboard::Key key = key_code_map[itr->second];
@@ -27,7 +27,7 @@ InputController* InputFactory::createInputController(std::shared_ptr<sf::RenderW
 	return new InputController(window, name_code_map, name_mouse_map);
 }
 
-MouseMap InputFactory::create_mouse_map() {
+MouseMap InputFactory::CreateMouseMap() {
 	MouseMap map;
 
 	map["Left"] = sf::Mouse::Left;
@@ -37,7 +37,7 @@ MouseMap InputFactory::create_mouse_map() {
 	return map;
 }
 
-KeyMap InputFactory::create_map() {
+KeyMap InputFactory::CreateMap() {
 	KeyMap map;
 
 	// Character Map to SFML Keycodes

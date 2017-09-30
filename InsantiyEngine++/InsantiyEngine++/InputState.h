@@ -29,7 +29,7 @@ namespace InsanityEngine {
 
 		private:
 			InputStatusMap map;
-			RedStd::Vec2i mousePosition;
+			RedStd::Vec2i mouse_position;
 	};
 
 }

@@ -10,7 +10,8 @@ using namespace RedStd;
 using namespace InsanityEngine;
 
 InputController::InputController(std::shared_ptr<sf::RenderWindow> window, KeyMap nameToKeyCodeMap, MouseMap nameToButtonCodeMap)
-	: current_state(nameToKeyCodeMap), previous_state(nameToKeyCodeMap), currentWindow(window){
+	: current_state(nameToKeyCodeMap), previous_state(nameToKeyCodeMap) {
+	this->current_window = window;
 	this->name_code_map = nameToKeyCodeMap;
 	this->name_moude_map = nameToButtonCodeMap;
 }
@@ -39,5 +40,5 @@ Vec2i InputController::getCurrentMousePosition() {
 
 void InputController::udpateInputState() {
 	this->previous_state = this->current_state;
-	this->current_state.updateWithMap(*this->currentWindow, this->name_code_map, this->name_moude_map);
+	this->current_state.updateWithMap(*this->current_window, this->name_code_map, this->name_moude_map);
 }
