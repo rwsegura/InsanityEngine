@@ -19,12 +19,12 @@ InputController* InputFactory::createInputController(std::shared_ptr<sf::RenderW
 	KeyMap key_code_map = InputFactory::CreateMap();
 	MouseMap mouse_code_map = InputFactory::CreateMouseMap();
 
-	for (auto itr = data.KeyboardMap.begin(); itr != data.KeyboardMap.end(); ++itr) {
+	for (auto itr = data.keyboardMap.begin(); itr != data.keyboardMap.end(); ++itr) {
 		sf::Keyboard::Key key = key_code_map[itr->second];
 		name_code_map[itr->first] = key;
 	}
 
-	for (auto itr = data.MouseMap.begin(); itr != data.MouseMap.end(); ++itr) {
+	for (auto itr = data.mouseMap.begin(); itr != data.mouseMap.end(); ++itr) {
 		sf::Mouse::Button button = mouse_code_map[itr->second];
 		name_mouse_map[itr->first] = button;
 	}

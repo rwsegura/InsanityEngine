@@ -1,9 +1,19 @@
+/**
+* SoundController.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __SOUND_CONTROLLER_H__
 #define __SOUND_CONTROLLER_H__
 
 #include <map>
 #include <list>
 #include <SFML\Audio.hpp>
+
+/**
+* SoundController.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
 
 #include "MusicSound.h"
 #include "SoundEffect.h"
@@ -25,12 +35,11 @@ namespace InsanityEngine {
 
 		private:
 			bool is_muted;
-			std::map<std::string, SoundEffect*> sfx_map;
-
 			MusicSound *current_music;
+			std::map<std::string, SoundEffect*> sfx_map;
 			std::list<sf::Sound*> sound_list;
 
-			SoundEffect* getSoundEffect(std::string filename);
+			SoundEffect* _getSoundEffect(std::string filename);
 
 			static const int MAX_SFX_SOUNDS = 200;
 	};

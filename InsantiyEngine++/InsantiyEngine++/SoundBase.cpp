@@ -1,3 +1,8 @@
+/**
+* SoundBase.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include "SoundBase.h"
 
 using namespace std;

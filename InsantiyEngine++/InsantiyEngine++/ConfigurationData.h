@@ -9,15 +9,15 @@ namespace InsanityEngine {
 	class ConfigurationData {
 		public:
 			// General Configuration
-			std::string Title;
+			std::string title;
 			
 			// Resolution
-			int ResolutionWidth;
-			int ResolutionHeight;
+			int resolutionWidth;
+			int resolutionHeight;
 
 			// Input Configuration
-			std::map<std::string, std::string> KeyboardMap;
-			std::map<std::string, std::string> MouseMap;
+			std::map<std::string, std::string> keyboardMap;
+			std::map<std::string, std::string> mouseMap;
 
 	};
 

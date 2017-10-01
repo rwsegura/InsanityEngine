@@ -1,3 +1,8 @@
+/**
+* SoundFactory.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include "MusicSound.h"
 #include "SoundController.h"
 #include "SoundEffect.h"

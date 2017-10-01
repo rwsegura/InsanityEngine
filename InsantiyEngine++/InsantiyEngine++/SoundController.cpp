@@ -1,7 +1,10 @@
+/**
+* SoundController.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include <list>
 #include <SFML\Audio.hpp>
-
-#include <iostream>
 
 #include "MusicSound.h"
 #include "SoundController.h"
@@ -48,7 +51,7 @@ void SoundController::cleanSoundEffectList() {
 	}
 }
 
-SoundEffect* SoundController::getSoundEffect(string filename) {
+SoundEffect* SoundController::_getSoundEffect(string filename) {
 	SoundEffect* sound_effect = this->sfx_map[filename];
 
 	if (sound_effect == nullptr) {
@@ -73,7 +76,7 @@ void SoundController::playMusic(string filename) {
 void SoundController::playSoundEffect(string filename) {
 	if (this->sound_list.size() == SoundController::MAX_SFX_SOUNDS) return;
 
-	SoundEffect* sfx = this->getSoundEffect(filename);
+	SoundEffect* sfx = this->_getSoundEffect(filename);
 
 	Sound* sound = new Sound(sfx->getBuffer());
 	sound->setVolume(sfx->getVolume());

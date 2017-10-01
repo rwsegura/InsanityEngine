@@ -16,22 +16,22 @@ InsanityGameEngine::InsanityGameEngine(
 ) {
 	this->sound_controller = soundController;
 	this->input_controller = inputController;
-	this->drawableGraphicsManager = drawableGraphicsManager;
-	this->windowController = windowController;
+	this->window_controller = windowController;
+	this->drawable_graphics_manager = drawableGraphicsManager;
 }
 
 InsanityGameEngine::~InsanityGameEngine() {
 	delete this->input_controller;
-	delete this->windowController;
-	delete this->drawableGraphicsManager;
+	delete this->window_controller;
+	delete this->drawable_graphics_manager;
 }
 
 void InsanityGameEngine::runEngine() {
-	while (this->windowController->isActive()) {
+	while (this->window_controller->isActive()) {
 		this->input_controller->udpateInputState();
 
-		this->windowController->update();
-		this->drawableGraphicsManager->renderDrawableObjects();
+		this->window_controller->update();
+		this->drawable_graphics_manager->renderDrawableObjects();
 		this->sound_controller->cleanSoundEffectList();
 	}
 }

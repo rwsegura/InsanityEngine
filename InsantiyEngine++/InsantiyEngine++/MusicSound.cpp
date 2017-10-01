@@ -1,3 +1,8 @@
+/**
+* MusicSound.cpp
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #include "MusicSound.h"
 #include "SoundBase.h"
 

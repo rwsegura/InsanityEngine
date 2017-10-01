@@ -12,7 +12,7 @@
 using namespace rapidjson;
 using namespace InsanityEngine;
 
-Document InsanityEngineFactory::openInputJsonFile(std::string filename) {
+Document InsanityEngineFactory::OpenInputJsonFile(std::string filename) {
 	FILE *fp;
 	fopen_s(&fp, filename.c_str(), "rb");
 	if (!fp) {
@@ -31,32 +31,32 @@ Document InsanityEngineFactory::openInputJsonFile(std::string filename) {
 	return doc;
 }
 
-ConfigurationData InsanityEngineFactory::loadConfigurationData(std::string filename) {
-	Document doc = InsanityEngineFactory::openInputJsonFile(filename);
+ConfigurationData InsanityEngineFactory::LoadConfigurationData(std::string filename) {
+	Document doc = InsanityEngineFactory::OpenInputJsonFile(filename);
 
 	ConfigurationData data;
-	data.Title = doc["title"].GetString();
+	data.title = doc["title"].GetString();
 
 	auto resolution_data = doc["resolution"].GetObject();
-	data.ResolutionWidth = resolution_data["width"].GetInt();
-	data.ResolutionHeight = resolution_data["height"].GetInt();
+	data.resolutionWidth = resolution_data["width"].GetInt();
+	data.resolutionHeight = resolution_data["height"].GetInt();
 
 	auto keyboard_data = doc["keyboard"].GetObject();
 	for (auto itr = keyboard_data.MemberBegin(); itr != keyboard_data.MemberEnd(); ++itr) {
-		data.KeyboardMap[itr->name.GetString()] = itr->value.GetString();
+		data.keyboardMap[itr->name.GetString()] = itr->value.GetString();
 	}
 
 	auto mouse_data = doc["mouse"].GetObject();
 	for (auto itr = mouse_data.MemberBegin(); itr != mouse_data.MemberEnd(); ++itr) {
-		data.MouseMap[itr->name.GetString()] = itr->value.GetString();
+		data.mouseMap[itr->name.GetString()] = itr->value.GetString();
 	}
 
 	return data;
 }
 
-InsanityGameEngineRef InsanityEngineFactory::createEngine(std::string filename) {
-	ConfigurationData data = InsanityEngineFactory::loadConfigurationData(filename);
-	std::shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(data.ResolutionWidth, data.ResolutionHeight), data.Title));
+InsanityGameEngineRef InsanityEngineFactory::CreateEngine(std::string filename) {
+	ConfigurationData data = InsanityEngineFactory::LoadConfigurationData(filename);
+	std::shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(data.resolutionWidth, data.resolutionHeight), data.title));
 	sf::View view = window->getDefaultView();
 	std::shared_ptr<Camera> camera(new Camera(view));
 

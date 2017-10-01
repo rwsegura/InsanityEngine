@@ -23,8 +23,8 @@ namespace InsanityEngine {
 			~InsanityGameEngine();
 			void runEngine();
 		private:
-			DrawableGraphicsManagerRef drawableGraphicsManager;
-			WindowControllerRef windowController;
+			DrawableGraphicsManagerRef drawable_graphics_manager;
+			WindowControllerRef window_controller;
 			InputControllerRef input_controller;
 			SoundControllerRef sound_controller;
 	};

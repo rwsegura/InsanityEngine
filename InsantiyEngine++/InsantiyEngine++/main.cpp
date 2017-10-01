@@ -6,7 +6,7 @@
 using namespace InsanityEngine;
 
 int main() {
-	InsanityGameEngineRef engine = InsanityEngineFactory::createEngine("config.json");
+	InsanityGameEngineRef engine = InsanityEngineFactory::CreateEngine("config.json");
 	engine->runEngine();
 	delete engine;
     return 0;

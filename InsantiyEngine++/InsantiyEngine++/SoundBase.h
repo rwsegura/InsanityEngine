@@ -1,3 +1,8 @@
+/**
+* SoundBase.h
+* Created By: Robert Segura Date: 9/30/2017
+*/
+
 #ifndef __SOUND_BASE_CONTROLLER_H__
 #define __SOUND_BASE_CONTROLLER_H__
 
