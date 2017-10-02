@@ -102,6 +102,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EngineFactory.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GraphicsController.cpp" />
     <ClCompile Include="GraphicsDataFactory.cpp" />
     <ClCompile Include="GraphicsFactory.cpp" />
@@ -121,9 +122,11 @@
     <ClCompile Include="WindowController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseComponent.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="ConfigurationData.h" />
     <ClInclude Include="EngineFactory.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="GraphicsController.h" />
     <ClInclude Include="GraphicsDataFactory.h" />
     <ClInclude Include="GraphicsFactory.h" />
@@ -141,6 +144,7 @@
     <ClInclude Include="SoundEffect.h" />
     <ClInclude Include="SoundFactory.h" />
     <ClInclude Include="StaticGraphicsData.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="WindowController.h" />
   </ItemGroup>
   <ItemGroup>

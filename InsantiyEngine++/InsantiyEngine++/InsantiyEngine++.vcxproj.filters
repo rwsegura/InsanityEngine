@@ -142,6 +142,36 @@
     <Filter Include="Networking Framework\Controllers\Source Files">
       <UniqueIdentifier>{fca526b8-2a45-46f5-8d6f-d3b3cfc990e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Gameplay Framework">
+      <UniqueIdentifier>{4d120c84-dd0f-4227-9ed8-86bf7d43b8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameObject">
+      <UniqueIdentifier>{fa6dddf0-dc4d-441a-a7ea-5f22d68ed5f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameScene">
+      <UniqueIdentifier>{7e2f3057-fee7-4c32-8456-9d958067be79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameComponent">
+      <UniqueIdentifier>{d564f76e-c68d-465b-98a1-2231bb7c2b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameObject\Header Files">
+      <UniqueIdentifier>{6d587933-1b4d-465c-9bcf-88d03419ef3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameObject\Source Files">
+      <UniqueIdentifier>{98d957e6-17ee-46fc-a97c-bd5ea4ef27b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameScene\Header Files">
+      <UniqueIdentifier>{71890501-c8ad-4948-8091-db0445d22095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameScene\Source FIles">
+      <UniqueIdentifier>{0c2bab1c-2b0f-4396-bd79-b3a508747201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameComponent\Header Files">
+      <UniqueIdentifier>{b8d65904-1dcc-485a-9f6c-1dce9ba4d5d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameComponent\Source Files">
+      <UniqueIdentifier>{edfa9d4f-4199-4c4c-ba70-162264efb775}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -195,6 +225,9 @@
     </ClCompile>
     <ClCompile Include="EngineFactory.cpp">
       <Filter>EngineSystemCore\Factories\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Gameplay Framework\GameObject\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +293,15 @@
     </ClInclude>
     <ClInclude Include="EngineFactory.h">
       <Filter>EngineSystemCore\Factories\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Gameplay Framework\GameObject\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Gameplay Framework\GameObject\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseComponent.h">
+      <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
