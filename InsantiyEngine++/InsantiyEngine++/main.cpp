@@ -10,7 +10,11 @@ int main() {
 	ConfigurationData data = InsanityEngineFactory::LoadConfigurationData("config.json");
 	InsanityGameEngineRef engine = InsanityEngineFactory::CreateEngine(data);
 
-	GameScene* initial_scene = GameBuilder::BuildSceneFromFile(data.initialSceneFilename, engine);
+	GameScene* initial_scene = GameBuilder::BuildSceneFromFile(
+		data.initialSceneFilename,
+		*engine
+	);
+
 	engine->setActiveScene(initial_scene);
 
 	engine->runEngine();

@@ -24,6 +24,30 @@
         }
       ],
       "Children": []
+    },
+    {
+      "Name": "Test Object 2",
+      "Transform": {
+        "Position": {
+          "X": 100,
+          "Y": 100
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 0,
+          "Y": 0
+        }
+      },
+      "Components": [
+        {
+          "Type": "GraphicsComponent",
+          "Texture": "Test.png"
+        }
+      ],
+      "Children": []
     }
   ]
 }

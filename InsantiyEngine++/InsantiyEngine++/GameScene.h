@@ -8,6 +8,8 @@
 namespace InsanityEngine {
 
 	class GameScene {
+		friend class GameBuilder;
+
 		public:
 			GameScene();
 			~GameScene();
@@ -18,6 +20,7 @@ namespace InsanityEngine {
 			void onEndScene();
 
 		protected:
+			std::string name;
 			std::vector<GameObject*> objects;
 	};
 

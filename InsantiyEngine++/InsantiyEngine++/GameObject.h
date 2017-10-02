@@ -11,6 +11,8 @@ namespace InsanityEngine {
 	class GameScene;
 
 	class GameObject {
+		friend class GameBuilder;
+
 		public:
 			GameObject(GameScene &scene);
 			~GameObject();

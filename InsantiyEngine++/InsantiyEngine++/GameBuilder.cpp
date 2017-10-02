@@ -12,20 +12,39 @@ using namespace std;
 using namespace rapidjson;
 using namespace InsanityEngine;
 
-GameScene* GameBuilder::BuildSceneFromFile(string filename, InsanityGameEngineRef api) {
-	GameScene* new_scene = new GameScene();
-
+GameScene* GameBuilder::BuildSceneFromFile(string filename, InsanityGameEngine &api) {
 	GameSceneData scene_data = GameBuilder::LoadSceneDataFromFile(filename);
 
+	GameScene* new_scene = new GameScene();
+	new_scene->name = scene_data.name;
+
+	for (auto object_data : scene_data.objectData) {
+		GameObject *object = GameBuilder::BuildGameObject(*new_scene, object_data, api);
+		new_scene->objects.push_back(object);
+	}
 
 	return new_scene;
 }
 
-GameObject* GameBuilder::BuildGameObject(InsanityGameEngineRef api) {
-	return nullptr;
+GameObject* GameBuilder::BuildGameObject(
+	GameScene &scene, 
+	GameObjectData &data,
+	InsanityGameEngine &api
+) {
+	GameObject *gameobject = new GameObject(scene);
+	gameobject->transform = data.transform;
+
+	for (auto child_data : data.children) {
+		GameObject *child = GameBuilder::BuildGameObject(scene, child_data, api);
+		gameobject->children.push_back(child);
+	}
+
+	// TODO: Implement Code Here
+	return gameobject;
 }
 
-BaseComponent* GameBuilder::BuildComponent(InsanityGameEngineRef api) {
+BaseComponent* GameBuilder::BuildComponent(InsanityGameEngine &api) {
+	// TODO: Implement Code Here
 	return nullptr;
 }
 
