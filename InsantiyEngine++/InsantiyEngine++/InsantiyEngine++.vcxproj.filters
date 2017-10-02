@@ -172,6 +172,15 @@
     <Filter Include="Gameplay Framework\GameComponent\Source Files">
       <UniqueIdentifier>{edfa9d4f-4199-4c4c-ba70-162264efb775}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Gameplay Framework\GameBuilder">
+      <UniqueIdentifier>{8a366675-e3d4-4eef-8b08-a4b64731b41b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameBuilder\Header Files">
+      <UniqueIdentifier>{a9ad062e-684d-49e8-b541-6ccea5a878f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay Framework\GameBuilder\Source Files">
+      <UniqueIdentifier>{da5a6df4-b919-43f6-887a-38b780438fd8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -228,6 +237,12 @@
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Gameplay Framework\GameObject\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Gameplay Framework\GameScene\Source FIles</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBuilder.cpp">
+      <Filter>Gameplay Framework\GameBuilder\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -303,12 +318,22 @@
     <ClInclude Include="BaseComponent.h">
       <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Gameplay Framework\GameScene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBuilder.h">
+      <Filter>Gameplay Framework\GameBuilder\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSceneData.h">
+      <Filter>Gameplay Framework\GameBuilder\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
+    <None Include="TestScene.json" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Coding_Standards.txt" />

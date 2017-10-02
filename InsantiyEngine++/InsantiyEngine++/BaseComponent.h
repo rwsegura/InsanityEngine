@@ -8,6 +8,7 @@
 namespace InsanityEngine {
 
 	class GameObject; // Forward Declaration
+	class InsanityGameEngine;
 
 	class BaseComponent {
 		public:
@@ -22,6 +23,7 @@ namespace InsanityEngine {
 			
 		protected:
 			GameObject &gameobject;
+			InsanityGameEngine &insanityapi;
 
 	};
 

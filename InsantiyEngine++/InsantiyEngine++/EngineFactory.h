@@ -10,10 +10,10 @@ namespace InsanityEngine {
 
 	class InsanityEngineFactory {
 		public:
-			static InsanityGameEngineRef CreateEngine(std::string filename);
+			static InsanityGameEngineRef CreateEngine(ConfigurationData &data);
+			static ConfigurationData LoadConfigurationData(std::string filename);
 		private:
 			static rapidjson::Document OpenInputJsonFile(std::string filename);
-			static ConfigurationData LoadConfigurationData(std::string filename);
 	};
 
 }

@@ -30,6 +30,7 @@ namespace InsanityEngine {
 			std::vector<BaseComponent*> components;
 
 			GameScene &currentScene;
+			//GameObject &parent;
 	};
 
 }

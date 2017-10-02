@@ -1,0 +1,29 @@
+{
+  "Name": "Test Scene",
+  "GameObjects": [
+    {
+      "Name": "Test Object",
+      "Transform": {
+        "Position": {
+          "X": 0,
+          "Y": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 0,
+          "Y": 0
+        }
+      },
+      "Components": [
+        {
+          "Type": "GraphicsComponent",
+          "Texture": "Test.png"
+        }
+      ],
+      "Children": []
+    }
+  ]
+}

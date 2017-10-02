@@ -2,7 +2,7 @@
 
 using namespace InsanityEngine;
 
-GameObject::GameObject(GameScene &scene) : currentScene(scene) {
+GameObject::GameObject(GameScene &scene) : currentScene(scene)  {
 
 }
 

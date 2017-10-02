@@ -1,6 +1,7 @@
 {
   "title": "Insanity Engine Test",
-  "version":  "0.1.5",
+  "version": "0.1.5",
+  "initial_scane":  "TestScene.json",
   
   "resolution": {
     "width": 400,

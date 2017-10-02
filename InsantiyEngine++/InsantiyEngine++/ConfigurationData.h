@@ -10,6 +10,7 @@ namespace InsanityEngine {
 		public:
 			// General Configuration
 			std::string title;
+			std::string initialSceneFilename;
 			
 			// Resolution
 			int resolutionWidth;
