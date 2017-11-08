@@ -14,6 +14,8 @@ namespace InsanityEngine {
 	typedef class InsanityGameEngine* InsanityGameEngineRef;
 
 	class InsanityGameEngine {
+		friend class GameBuilder;
+
 		public:
 			InsanityGameEngine(
 				SoundControllerRef soundController,

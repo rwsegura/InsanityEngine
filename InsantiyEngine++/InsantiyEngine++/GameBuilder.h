@@ -11,7 +11,10 @@ namespace InsanityEngine {
 
 	class GameBuilder {
 		public:
-			static GameScene* BuildSceneFromFile(std::string filename, InsanityGameEngine &api);
+			static GameScene* BuildSceneFromFile(
+				std::string filename,
+				InsanityGameEngine &api
+			);
 
 		private:
 			static GameObject* BuildGameObject(
@@ -19,7 +22,11 @@ namespace InsanityEngine {
 				GameObjectData &data,
 				InsanityGameEngine &api
 			);
-			static BaseComponent* BuildComponent(InsanityGameEngine &api);
+			static BaseComponent* BuildComponent(
+				GameObject &object,
+				GameComponentData &data,
+				InsanityGameEngine &api
+			);
 
 			// Data Builders
 			static GameSceneData LoadSceneDataFromFile(std::string filename);

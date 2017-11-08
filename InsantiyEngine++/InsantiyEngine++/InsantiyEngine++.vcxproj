@@ -101,6 +101,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseComponent.cpp" />
     <ClCompile Include="EngineFactory.cpp" />
     <ClCompile Include="GameBuilder.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -120,6 +121,7 @@
     <ClCompile Include="SoundController.cpp" />
     <ClCompile Include="SoundEffect.cpp" />
     <ClCompile Include="SoundFactory.cpp" />
+    <ClCompile Include="StaticGraphicsComponent.cpp" />
     <ClCompile Include="StaticGraphicsData.cpp" />
     <ClCompile Include="WindowController.cpp" />
   </ItemGroup>
@@ -148,6 +150,7 @@
     <ClInclude Include="SoundController.h" />
     <ClInclude Include="SoundEffect.h" />
     <ClInclude Include="SoundFactory.h" />
+    <ClInclude Include="StaticGraphicsComponent.h" />
     <ClInclude Include="StaticGraphicsData.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="WindowController.h" />

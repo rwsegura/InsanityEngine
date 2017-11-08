@@ -13,14 +13,18 @@
           "Y": 0
         },
         "Scale": {
-          "X": 0,
-          "Y": 0
+          "X": 1,
+          "Y": 1
         }
       },
       "Components": [
         {
-          "Type": "GraphicsComponent",
-          "Texture": "Test.png"
+          "Type": "StaticGraphicsComponent",
+          "Texture": "Test.png",
+          "RectX": "0",
+          "RectY": "0",
+          "RectW": "40",
+          "RectH": "40"
         }
       ],
       "Children": []
@@ -37,14 +41,46 @@
           "Y": 0
         },
         "Scale": {
-          "X": 0,
-          "Y": 0
+          "X": 1,
+          "Y": 1
         }
       },
       "Components": [
         {
-          "Type": "GraphicsComponent",
-          "Texture": "Test.png"
+          "Type": "StaticGraphicsComponent",
+          "Texture": "Test.png",
+          "RectX": "30",
+          "RectY": "0",
+          "RectW": "40",
+          "RectH": "40"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Name": "Test Object 3",
+      "Transform": {
+        "Position": {
+          "X": 150,
+          "Y": 150
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0
+        },
+        "Scale": {
+          "X": 1,
+          "Y": 1
+        }
+      },
+      "Components": [
+        {
+          "Type": "StaticGraphicsComponent",
+          "Texture": "Test.png",
+          "RectX": "30",
+          "RectY": "0",
+          "RectW": "40",
+          "RectH": "40"
         }
       ],
       "Children": []

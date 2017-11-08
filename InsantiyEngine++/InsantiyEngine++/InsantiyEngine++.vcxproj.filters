@@ -244,6 +244,12 @@
     <ClCompile Include="GameBuilder.cpp">
       <Filter>Gameplay Framework\GameBuilder\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StaticGraphicsComponent.cpp">
+      <Filter>Gameplay Framework\GameComponent\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseComponent.cpp">
+      <Filter>Gameplay Framework\GameComponent\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InsanityEngine.h">
@@ -326,6 +332,9 @@
     </ClInclude>
     <ClInclude Include="GameSceneData.h">
       <Filter>Gameplay Framework\GameBuilder\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticGraphicsComponent.h">
+      <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

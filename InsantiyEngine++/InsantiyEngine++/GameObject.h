@@ -8,6 +8,7 @@
 
 namespace InsanityEngine {
 
+	class BaseComponent;
 	class GameScene;
 
 	class GameObject {
@@ -16,6 +17,8 @@ namespace InsanityEngine {
 		public:
 			GameObject(GameScene &scene);
 			~GameObject();
+
+			Transform& getTransform();
 
 			// Lifecycle Functions
 			void onCreate();

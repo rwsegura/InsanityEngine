@@ -12,6 +12,8 @@ namespace InsanityEngine {
 
 	class BaseComponent {
 		public:
+			BaseComponent(GameObject &object, InsanityGameEngine &api);
+
 			// Lifecycle Functions
 			virtual void onCreate() = 0;
 			virtual void onLoad() = 0;

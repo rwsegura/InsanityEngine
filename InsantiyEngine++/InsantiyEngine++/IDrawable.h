@@ -25,36 +25,5 @@ namespace InsanityEngine {
 			virtual RedStd::Rect textureFrame() = 0;
 	};
 
-	class TestDrawable : public IDrawable {
-		public:
-			TestDrawable(float x, float y) {
-				this->x = x;
-				this->y = y;
-			}
-
-			virtual RedStd::Vec2f position() {
-				return RedStd::Vec2f(x, y);
-			}
-
-			virtual RedStd::Vec2f rotation() {
-				return RedStd::Vec2f(0.0f, 0.0f);
-			}
-
-			virtual RedStd::Vec2f scale() {
-				return RedStd::Vec2f(1.0f, 1.0f);
-			}
-
-			virtual RedStd::Rect textureFrame() {
-				return RedStd::Rect(30, 0, 40, 40);
-			}
-
-			virtual std::string textureKey() {
-				return "Test.png";
-			}
-
-		private:
-			float x, y;
-	};
-
 }
 #endif

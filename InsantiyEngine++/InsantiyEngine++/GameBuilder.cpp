@@ -1,3 +1,4 @@
+#include <iostream>
 #include <rapidjson\filereadstream.h>
 #include <rapidjson\document.h>
 
@@ -5,6 +6,7 @@
 #include "GameObject.h"
 #include "GameScene.h"
 #include "InsanityEngine.h"
+#include "StaticGraphicsComponent.h"
 #include "Transform.h"
 #include "Vector2.h"
 
@@ -39,11 +41,34 @@ GameObject* GameBuilder::BuildGameObject(
 		gameobject->children.push_back(child);
 	}
 
-	// TODO: Implement Code Here
+	for (auto component : data.components) {
+		BaseComponent *base_component = GameBuilder::BuildComponent(*gameobject, component, api);
+		gameobject->components.push_back(base_component);
+	}
+
 	return gameobject;
 }
 
-BaseComponent* GameBuilder::BuildComponent(InsanityGameEngine &api) {
+BaseComponent* GameBuilder::BuildComponent(
+	GameObject &object,
+	GameComponentData &data,
+	InsanityGameEngine &api
+) {
+	string type = data.component_data["Type"];
+	if (strcmp(type.c_str(), "StaticGraphicsComponent") == 0) {
+		string tex_key = data.component_data["Texture"];
+		int rectX = std::stoi(data.component_data["RectX"]);
+		int rectY = std::stoi(data.component_data["RectY"]);
+		int rectW = std::stoi(data.component_data["RectW"]);
+		int rectH = std::stoi(data.component_data["RectH"]);
+		return new StaticGraphicsComponent(
+			tex_key, RedStd::Rect(rectX, rectY, rectW, rectH),
+			object, api, *api.drawable_graphics_manager
+		);
+	} else if (strcmp(type.c_str(), "PythonComponent") == 0) {
+		return nullptr;
+	}
+
 	// TODO: Implement Code Here
 	return nullptr;
 }

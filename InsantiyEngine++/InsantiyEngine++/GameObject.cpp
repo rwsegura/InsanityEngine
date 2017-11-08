@@ -16,6 +16,12 @@ GameObject::~GameObject() {
 	}
 }
 
+Transform& GameObject::getTransform() {
+	return this->transform;
+}
+
+// LifeCycle and Update Methods
+
 void GameObject::onCreate() {
 	// Maybe do nothing?
 }
