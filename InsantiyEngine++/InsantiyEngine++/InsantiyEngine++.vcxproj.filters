@@ -336,6 +336,9 @@
     <ClInclude Include="StaticGraphicsComponent.h">
       <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PythonComponent.h">
+      <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Test.png" />

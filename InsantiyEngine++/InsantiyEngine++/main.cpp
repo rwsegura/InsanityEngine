@@ -1,3 +1,6 @@
+#define BOOST_PYTHON_STATIC_LIB
+#include <boost\python.hpp>
+
 #include "ConfigurationData.h"
 #include "EngineFactory.h"
 #include "GameBuilder.h"
@@ -7,6 +10,8 @@
 using namespace InsanityEngine;
 
 int main() {
+	//Py_Initialize();
+
 	ConfigurationData data = InsanityEngineFactory::LoadConfigurationData("config.json");
 	InsanityGameEngineRef engine = InsanityEngineFactory::CreateEngine(data);
 
