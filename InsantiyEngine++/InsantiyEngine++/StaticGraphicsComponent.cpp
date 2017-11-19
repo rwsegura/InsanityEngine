@@ -1,3 +1,4 @@
+#include "GameObject.h"
 #include "StaticGraphicsComponent.h"
 
 using namespace std;

@@ -250,6 +250,9 @@
     <ClCompile Include="BaseComponent.cpp">
       <Filter>Gameplay Framework\GameComponent\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PythonScriptComponent.cpp">
+      <Filter>Gameplay Framework\GameComponent\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InsanityEngine.h">
@@ -336,8 +339,11 @@
     <ClInclude Include="StaticGraphicsComponent.h">
       <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PythonComponent.h">
+    <ClInclude Include="PythonScriptComponent.h">
       <Filter>Gameplay Framework\GameComponent\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonScriptBinding.h">
+      <Filter>EngineSystemCore\Engine Core\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -346,6 +352,7 @@
   <ItemGroup>
     <None Include="config.json" />
     <None Include="TestScene.json" />
+    <None Include="TestComponent.py" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Coding_Standards.txt" />

@@ -6,7 +6,7 @@
     <LocalDebuggerCommandArguments>--out %25debug</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerEnvironment>PATH=%PATH%;D:\AppData\Local\Programs\Python\Python36-32;</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>PATH=%PATH%;C:\Python27;</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

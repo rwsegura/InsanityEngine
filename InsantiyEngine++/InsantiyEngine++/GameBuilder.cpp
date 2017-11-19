@@ -2,6 +2,7 @@
 #include <rapidjson\filereadstream.h>
 #include <rapidjson\document.h>
 
+#include "PythonScriptBinding.h"
 #include "GameBuilder.h"
 #include "GameObject.h"
 #include "GameScene.h"
@@ -13,6 +14,7 @@
 using namespace std;
 using namespace rapidjson;
 using namespace InsanityEngine;
+using namespace py::literals;
 
 GameScene* GameBuilder::BuildSceneFromFile(string filename, InsanityGameEngine &api) {
 	GameSceneData scene_data = GameBuilder::LoadSceneDataFromFile(filename);
@@ -66,11 +68,21 @@ BaseComponent* GameBuilder::BuildComponent(
 			object, api, *api.drawable_graphics_manager
 		);
 	} else if (strcmp(type.c_str(), "PythonComponent") == 0) {
-		return nullptr;
+		try {
+			auto py_local = py::module::import("insanity_api").attr("__dict__");
+			auto locals = py::dict("object"_a = object, "api"_a = api, **py_local);
+
+			py::eval_file(data.component_data["File"], py::globals(), locals);
+			return locals["newComponent"].cast<BaseComponent*>();
+		} catch (std::exception e) {
+			std::cout << e.what() << std::endl;
+			return new NullComponent(object, api);
+		}
+
+		return new NullComponent(object, api);
 	}
 
-	// TODO: Implement Code Here
-	return nullptr;
+	return new NullComponent(object, api);
 }
 
 // GAME SCENE DATA BUILDER

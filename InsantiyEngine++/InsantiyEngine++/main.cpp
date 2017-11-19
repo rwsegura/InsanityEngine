@@ -1,16 +1,16 @@
-#define BOOST_PYTHON_STATIC_LIB
-#include <boost\python.hpp>
+#include <pybind11\embed.h>
 
+#include "GameBuilder.h"
 #include "ConfigurationData.h"
 #include "EngineFactory.h"
-#include "GameBuilder.h"
 #include "GameScene.h"
 #include "InsanityEngine.h"
 
+namespace py = pybind11;
 using namespace InsanityEngine;
 
 int main() {
-	//Py_Initialize();
+	py::scoped_interpreter guard{};
 
 	ConfigurationData data = InsanityEngineFactory::LoadConfigurationData("config.json");
 	InsanityGameEngineRef engine = InsanityEngineFactory::CreateEngine(data);

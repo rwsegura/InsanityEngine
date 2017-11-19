@@ -53,8 +53,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\AppData\Local\Programs\Python\Python36-32\include;D:\Libaries\boost;</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;D:\AppData\Local\Programs\Python\Python36-32\libs;D:\Libaries\boost\lib32-msvc-14.1</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Python27\include;D:\Libaries\pybind11\include;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;C:\Python27\libs;</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -67,7 +67,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Libaries\SFML-2.4.2\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;winmm.lib;ws2_32.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;ogg.lib;flac.lib;openal32.lib;opengl32.lib;freetype.lib;jpeg.lib;sfml-network-s-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;winmm.lib;ws2_32.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;ogg.lib;flac.lib;openal32.lib;opengl32.lib;freetype.lib;jpeg.lib;sfml-network-s-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RedStd Unit Test|Win32'">
@@ -120,6 +120,7 @@
     <ClCompile Include="DrawableGraphicsManager.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="MusicSound.cpp" />
+    <ClCompile Include="PythonScriptComponent.cpp" />
     <ClCompile Include="SoundBase.cpp" />
     <ClCompile Include="SoundController.cpp" />
     <ClCompile Include="SoundEffect.cpp" />
@@ -149,7 +150,8 @@
     <ClInclude Include="MusicSound.h" />
     <ClInclude Include="NetworkingController.h" />
     <ClInclude Include="DrawableGraphicsManager.h" />
-    <ClInclude Include="PythonComponent.h" />
+    <ClInclude Include="PythonScriptBinding.h" />
+    <ClInclude Include="PythonScriptComponent.h" />
     <ClInclude Include="SoundBase.h" />
     <ClInclude Include="SoundController.h" />
     <ClInclude Include="SoundEffect.h" />
@@ -161,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
+    <None Include="TestComponent.py" />
     <None Include="TestScene.json" />
   </ItemGroup>
   <ItemGroup>

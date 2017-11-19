@@ -25,6 +25,10 @@
           "RectY": "0",
           "RectW": "40",
           "RectH": "40"
+        },
+        {
+          "Type": "PythonComponent",
+          "File": "TestComponent.py"
         }
       ],
       "Children": []

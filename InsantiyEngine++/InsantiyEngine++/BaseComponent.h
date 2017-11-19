@@ -3,8 +3,6 @@
 
 #include <vector>
 
-#include "GameObject.h"
-
 namespace InsanityEngine {
 
 	class GameObject; // Forward Declaration
@@ -27,6 +25,21 @@ namespace InsanityEngine {
 			GameObject &gameobject;
 			InsanityGameEngine &insanityapi;
 
+	};
+
+	class NullComponent : public BaseComponent {
+		public:
+			NullComponent(GameObject &object, InsanityGameEngine &api) : BaseComponent(object, api) {
+
+			}
+
+			virtual void onCreate() { }
+			virtual void onLoad() { }
+			virtual void onUnload() { }
+
+			// Update Functions
+			virtual void onUpdate() { }
+			virtual void onLateUpdate() { }
 	};
 
 }
