@@ -16,8 +16,6 @@ namespace InsanityEngine {
 			// Update Functions
 			virtual void onUpdate();
 			virtual void onLateUpdate();
-
-		private:
 	};
 
 }

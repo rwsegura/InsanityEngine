@@ -11,7 +11,10 @@ class TestComponent(ScriptComponent):
         print("Unloaded")
 
     def onUpdate(self):
-        pass
+        if self.api.isKeyPressed("Forward"):
+            print("Testing Keyboard Input")
+        elif self.api.isKeyReleased("TEST"):
+            print("Testing Mouse Click")
 
     def onLateUpdate(self):
         pass

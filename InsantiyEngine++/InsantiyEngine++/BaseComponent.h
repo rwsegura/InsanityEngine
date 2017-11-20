@@ -20,6 +20,9 @@ namespace InsanityEngine {
 			// Update Functions
 			virtual void onUpdate() = 0;
 			virtual void onLateUpdate() = 0;
+
+			GameObject& getGameObject();
+			InsanityGameEngine& getApi();
 			
 		protected:
 			GameObject &gameobject;
